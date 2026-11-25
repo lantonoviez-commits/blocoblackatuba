@@ -414,6 +414,219 @@
     .guide-step h4 { color: #a3e635; font-size: 13.5px; margin-bottom: 4px; }
     .guide-step p, .guide-step li { font-size: 12.5px; color: #cbd5e1; }
     .guide-step ul { padding-left: 18px; margin-top: 4px; display: flex; flex-direction: column; gap: 3px; }
+
+    /* ===================================================================== */
+    /* MODO ONE-PAGE EXECUTIVO — TEMA CLARO QLIK/LEROY MERLIN (PRINT)        */
+    /* ===================================================================== */
+    .btn-onepage {
+      background: #00a82d;
+      border-color: #00a82d;
+      color: #ffffff;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(0, 168, 45, 0.3);
+    }
+    .btn-onepage:hover { background: #008f26; border-color: #008f26; }
+
+    body.onepage-active {
+      background-color: #f4f6f8 !important;
+      color: #1e293b !important;
+    }
+    body.onepage-active .mode-row,
+    body.onepage-active #viewBlocoBlack,
+    body.onepage-active #viewExtras {
+      display: none !important;
+    }
+    body.onepage-active .topbar-btns .btn:not(#btnToggleOnePage),
+    body.onepage-active .topbar-btns .btn-pill-green {
+      display: none !important;
+    }
+    body.onepage-active .container {
+      max-width: 1480px;
+      padding: 12px 18px 20px;
+    }
+    body.onepage-active .topbar {
+      background: #ffffff !important;
+      border: 2px solid #00a82d !important;
+      padding: 10px 16px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+    body.onepage-active .lm-triangle {
+      border-bottom-color: #00a82d !important;
+    }
+    body.onepage-active .brand-titles h1 {
+      color: #0f172a !important;
+    }
+    body.onepage-active .brand-titles p {
+      color: #475569 !important;
+    }
+    body.onepage-active #btnToggleOnePage {
+      background: #0f172a !important;
+      border-color: #0f172a !important;
+      color: #ffffff !important;
+      box-shadow: none !important;
+    }
+
+    #viewOnePage { display: none; }
+    body.onepage-active #viewOnePage { display: block; }
+
+    .op-meta-strip {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-left: 5px solid #00a82d;
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #334155;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+    .op-duels-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 980px) { .op-duels-grid { grid-template-columns: 1fr; } }
+
+    .op-card {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 13px 16px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+    .op-card.win { border-top: 4px solid #00a82d; }
+    .op-card.lose { border-top: 4px solid #d97706; }
+
+    .op-badge-win {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .op-badge-lose {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .op-vs-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .op-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .op-box.me {
+      border: 1.5px solid #00a82d;
+      background: #f0fdf4;
+    }
+    .op-score-big {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 4px 0;
+    }
+    .op-kpi-line {
+      font-size: 11px;
+      color: #475569;
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+    .op-kpi-line b { color: #0f172a; }
+
+    .op-top5-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 980px) { .op-top5-grid { grid-template-columns: 1fr; } }
+
+    .op-table-card {
+      background: #ffffff;
+      border: 2px solid #00a82d;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+    .op-table-header {
+      background: #f8fafc;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .op-mini-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .op-mini-table th {
+      background: #f1f5f9 !important;
+      color: #475569 !important;
+      border-bottom: 1.5px solid #cbd5e1 !important;
+      padding: 6px 8px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .op-mini-table td {
+      padding: 5px 8px;
+      font-size: 11.5px;
+      color: #1e293b !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .op-mini-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .op-mini-table tr:hover {
+      background: #f1f5f9 !important;
+    }
+    .op-mini-table tr.op-me-row {
+      background: #dcfce7 !important;
+      font-weight: 800;
+    }
+    .op-mini-table tr.op-riv-row {
+      background: #e0f2fe !important;
+      font-weight: 700;
+    }
+    .op-pill-pos {
+      background: #dcfce7;
+      color: #15803d;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+    .op-pill-neg {
+      background: #fee2e2;
+      color: #b91c1c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -429,6 +642,7 @@
         </div>
       </div>
       <div class="topbar-btns">
+        <button id="btnToggleOnePage" class="btn btn-onepage" onclick="toggleOnePageMode()">📸 One-Page Diretoria</button>
         <button class="btn" onclick="openGuideModal()">📘 Regras Oficiais</button>
         <button class="btn btn-primary" onclick="openImportModal()">📊 Importar Relatório (.xlsx)</button>
         <button class="btn" onclick="openExpurgoModal()">🚫 Expurgos <span id="expurgoBadgeCount" style="background:#f59e0b; color:#0f172a; border-radius:999px; padding:1px 7px; font-size:11px; font-weight:800; margin-left:2px;">0</span></button>
@@ -442,14 +656,14 @@
     <!-- NAVIGATION TABS -->
     <div class="mode-row">
       <div class="tabs">
-        <button id="tabSec02" class="tab active" onclick="selectMainTab('02 - Carpintaria e Madeiras')">🪵 02 - Carpintaria e Madeiras (Atuba vs Salvador)</button>
-        <button id="tabSec04" class="tab" onclick="selectMainTab('04 - Ferramentas')">🛠️ 04 - Ferramentas (Atuba vs S. J. Rio Preto)</button>
+        <button id="tabSec02" class="tab" onclick="selectMainTab('02 - Carpintaria e Madeiras')">🪵 02 - Carpintaria e Madeiras (Atuba vs Salvador)</button>
+        <button id="tabSec04" class="tab active" onclick="selectMainTab('04 - Ferramentas')">🛠️ 04 - Ferramentas (Atuba vs S. J. Rio Preto)</button>
         <button id="tabExtras" class="tab" onclick="selectMainTab('EXTRAS')">🏆 Placar Geral &amp; Extras (Decolagem • MDH • Serviços • Celebre)</button>
       </div>
       <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
-        <label id="ignoreDopingToggleWrap" style="display:inline-flex; align-items:center; gap:7px; background:#151e22; border:1px solid #334155; padding:6px 12px; border-radius:9px; cursor:pointer; font-size:12.5px; font-weight:700; color:#e2e8f0; transition:0.15s;" title="Alterna entre o placar oficial (zerando quem está abaixo do piso -30%) e o placar potencial (somando os pontos 2x mesmo em doping)">
+        <label id="ignoreDopingToggleWrap" style="display: inline-flex; align-items: center; gap: 7px; background: rgba(245, 158, 11, 0.2); border: 1px solid rgb(245, 158, 11); padding: 6px 12px; border-radius: 9px; cursor: pointer; font-size: 12.5px; font-weight: 700; color: rgb(226, 232, 240); transition: 0.15s;" title="Alterna entre o placar oficial (zerando quem está abaixo do piso -30%) e o placar potencial (somando os pontos 2x mesmo em doping)">
           <input type="checkbox" id="ignoreDopingCheckbox" style="width:15px; height:15px; accent-color:#f59e0b; cursor:pointer;" onchange="toggleIgnoreDoping(this.checked)">
-          <span id="ignoreDopingLabel">👁️ Ignorar Doping / Ver Placar Potencial</span>
+          <span id="ignoreDopingLabel" style="color: rgb(251, 191, 36);">🔓 Modo Simulação: Placar Potencial (Ignorando Doping)</span>
         </label>
         <div style="display:flex; align-items:center; gap:8px;">
           <span style="font-size:12px; color:var(--text-muted); font-weight:600;">Média % Nacional:</span>
@@ -470,10 +684,10 @@
       <div id="duelBannerCard" class="duel-card losing" style="margin-bottom:18px;">
         <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px;">
           <div>
-            <strong id="duelTitle" style="font-size:15px; color:#fff;">⚔️ Confronto Direto — 02 - Carpintaria e Madeiras</strong>
+            <strong id="duelTitle" style="font-size:15px; color:#fff;">⚔️ Confronto Direto — 04 - Ferramentas</strong>
             <div style="font-size:12px; color:var(--text-muted);">Placar consolidado: Acumulado pré-Black + Pontos do Bloco Black (2x) + Extras (MDH / Serviços / Celebre)</div>
           </div>
-          <span id="duelStatusBadge" class="duel-badge lose">Atrás por 169 pts</span>
+          <span id="duelStatusBadge" class="duel-badge lose">Atrás por 29 pts</span>
         </div>
 
         <div class="vs-grid">
@@ -481,14 +695,14 @@
           <div class="fighter-box me">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-weight:800; color:#a3e635; font-size:14px;">👉 35 - Curitiba Atuba</span>
-              <span id="duelMeRank" style="font-size:12px; font-weight:700; color:#cbd5e1;">Posição Bloco: 27º / 47</span>
+              <span id="duelMeRank" style="font-size:12px; font-weight:700; color:#cbd5e1;">Posição Bloco: 1º / 47</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:4px;">
               <span style="font-size:12px; color:var(--text-muted);">Total Geral Acumulado:</span>
-              <span id="duelMeGrandTotal" style="font-size:24px; font-weight:900; color:#4ade80;">870 pts</span>
+              <span id="duelMeGrandTotal" style="font-size:24px; font-weight:900; color:#4ade80;">968 pts</span>
             </div>
-            <div id="duelMeBreakdown" style="font-size:11.5px; color:var(--text-muted);">Decolagem (170) + Diário (660) + Bloco 2x (0) + Extras (40)</div>
-            <div id="duelMeMarginLine" style="font-size:11.5px; font-weight:700; color:#cbd5e1;">MSV Bloco: 12,32% (Meta: 18,76% | Piso -30%: 13,13%)</div>
+            <div id="duelMeBreakdown" style="font-size:11.5px; color:var(--text-muted);">Decolagem (189) + Diário (674) + Bloco 2x (100) + Extras (5)</div>
+            <div id="duelMeMarginLine" style="font-size:11.5px; font-weight:700; color:#cbd5e1;">MSV Bloco: 13,30% (Meta: 18,19% | Piso -30%: 12,73%)</div>
           </div>
 
           <div class="vs-pill">VS</div>
@@ -496,15 +710,15 @@
           <!-- RIVAL (SALVADOR OR RIO PRETO) -->
           <div class="fighter-box">
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <span id="duelRivalName" style="font-weight:800; color:#38bdf8; font-size:14px;">🎯 59 - Salvador</span>
-              <span id="duelRivalRank" style="font-size:12px; font-weight:700; color:#cbd5e1;">Posição Bloco: 4º / 47</span>
+              <span id="duelRivalName" style="font-weight:800; color:#38bdf8; font-size:14px;">🎯 34 - São José do Rio Preto</span>
+              <span id="duelRivalRank" style="font-size:12px; font-weight:700; color:#cbd5e1;">Posição Bloco: 2º / 47</span>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:baseline; margin-top:4px;">
               <span style="font-size:12px; color:var(--text-muted);">Total Geral Acumulado:</span>
-              <span id="duelRivalGrandTotal" style="font-size:24px; font-weight:900; color:#38bdf8;">1039 pts</span>
+              <span id="duelRivalGrandTotal" style="font-size:24px; font-weight:900; color:#38bdf8;">997 pts <span style="font-size:11.5px; font-weight:700; color:#fbbf24;">(simulado s/ doping)</span></span>
             </div>
-            <div id="duelRivalBreakdown" style="font-size:11.5px; color:var(--text-muted);">Decolagem (118) + Diário (813) + Bloco 2x (68) + Extras (40)</div>
-            <div id="duelRivalMarginLine" style="font-size:11.5px; font-weight:700; color:#cbd5e1;">MSV Bloco: 20,59% (Meta: 19,57% | Piso -30%: 13,70%)</div>
+            <div id="duelRivalBreakdown" style="font-size:11.5px; color:var(--text-muted);">Decolagem (145) + Diário (757) + Bloco 2x (92 • c/ doping liberado) + Extras (3)</div>
+            <div id="duelRivalMarginLine" style="font-size:11.5px; font-weight:700; color:#cbd5e1;">MSV Bloco: 12,37% (Meta: 17,85% | Piso -30%: 12,50%)</div>
           </div>
         </div>
       </div>
@@ -524,7 +738,7 @@
           </div>
         </div>
 
-        <div id="blackDaysPills" class="days-pills"><div class="day-pill loaded"><span>✓ Dia 1 • 23/11 (Seg)</span><button title="Remover dia" onclick="removeBlackDay(1)">✕</button></div><div class="day-pill"><span>Dia 2 • 24/11 (Ter)</span></div><div class="day-pill"><span>Dia 3 • 25/11 (Qua)</span></div><div class="day-pill"><span>Dia 4 • 26/11 (Qui)</span></div><div class="day-pill"><span>Dia 5 • 27/11 (Sex)</span></div><div class="day-pill"><span>Dia 6 • 28/11 (Sáb)</span></div><div class="day-pill"><span>Dia 7 • 29/11 (Dom)</span></div><div class="day-pill"><span>Dia 8 • 30/11 (Seg)</span></div></div>
+        <div id="blackDaysPills" class="days-pills"><div class="day-pill loaded"><span>✓ Dia 1 • 23/11 (Seg)</span><button title="Remover dia" onclick="removeBlackDay(1)">✕</button></div><div class="day-pill loaded"><span>✓ Dia 2 • 24/11 (Ter)</span><button title="Remover dia" onclick="removeBlackDay(2)">✕</button></div><div class="day-pill"><span>Dia 3 • 25/11 (Qua)</span></div><div class="day-pill"><span>Dia 4 • 26/11 (Qui)</span></div><div class="day-pill"><span>Dia 5 • 27/11 (Sex)</span></div><div class="day-pill"><span>Dia 6 • 28/11 (Sáb)</span></div><div class="day-pill"><span>Dia 7 • 29/11 (Dom)</span></div><div class="day-pill"><span>Dia 8 • 30/11 (Seg)</span></div></div>
       </section>
 
       <!-- 2-COLUMN SIMULATOR & SECTION METRICS -->
@@ -568,21 +782,21 @@
         <div class="card">
           <div class="card-title">
             <span>Travamento de Margem &amp; Pontos (Atuba)</span>
-            <span id="secShortBadge" style="font-size:12px; color:var(--text-muted);">Seção 02</span>
+            <span id="secShortBadge" style="font-size:12px; color:var(--text-muted);">Seção 04</span>
           </div>
 
           <div class="kv-list">
             <div class="kv-row">
               <span class="kv-key">Venda A-1 Acumulada no Bloco</span>
-              <span id="kvVendaA1" class="kv-val">R$&nbsp;7.166</span>
+              <span id="kvVendaA1" class="kv-val">R$&nbsp;40.702</span>
             </div>
             <div class="kv-row">
               <span class="kv-key">MSV % Objetivo Mês (Atuba)</span>
-              <span id="kvMetaSec" class="kv-val">18,76%</span>
+              <span id="kvMetaSec" class="kv-val">18,19%</span>
             </div>
             <div class="kv-row">
               <span class="kv-key">Piso Anti-Doping Seção (-30%)</span>
-              <span id="kvMinSec" class="kv-val amber">13,13%</span>
+              <span id="kvMinSec" class="kv-val amber">12,73%</span>
             </div>
             <div class="kv-row" style="cursor:pointer;" onclick="openExpurgoModal()" title="Clique para gerenciar itens de expurgo desta seção">
               <span class="kv-key">Expurgos Descontados (s/ Doping) ↗</span>
@@ -590,7 +804,7 @@
             </div>
             <div class="kv-row">
               <span class="kv-key">Pontos Bloco Black (2x) [Prog % + Prog R$]</span>
-              <span id="kvPtsDetail" class="kv-val green">0 pts (Zerado - Bruto: 40)</span>
+              <span id="kvPtsDetail" class="kv-val green">100 pts (50 + 50)</span>
             </div>
           </div>
 
@@ -619,37 +833,37 @@
         <div class="decision-3col">
           <div class="dec-box">
             <div class="dec-label">Posição Nacional no Bloco</div>
-            <div id="decRankVal" class="dec-big">27º → 27º</div>
+            <div id="decRankVal" class="dec-big">1º → 1º</div>
             <div id="decRankSub" class="dec-sub">Mesma posição entre 47 lojas</div>
           </div>
 
           <div class="dec-box">
             <div class="dec-label">Pontuação do Bloco Black (2x)</div>
-            <div id="decPtsVal" class="dec-big">0 → 0 pts</div>
+            <div id="decPtsVal" class="dec-big">100 → 100 pts</div>
             <div id="decPtsSub" class="dec-sub">+0 pts no bloco (2x)</div>
           </div>
 
-          <div id="decDopingBox" class="dec-box danger">
+          <div id="decDopingBox" class="dec-box">
             <div class="dec-label" id="decMarginLabel">Margem Projetada vs Piso -30%</div>
-            <div id="decMarginVal" class="dec-big red">12,32%</div>
-            <div id="decMarginSub" class="dec-sub" style="color: rgb(252, 165, 165);">Abaixo do piso (13,13%) — ZERA!</div>
+            <div id="decMarginVal" class="dec-big amber">13,30%</div>
+            <div id="decMarginSub" class="dec-sub" style="color: rgb(74, 222, 128);">Piso: 12,73% • Sob controle</div>
           </div>
         </div>
 
-        <div id="simAdviceBanner" class="advice-bar danger">⚠️ <b>ALERTA DE DOPING NA SEÇÃO:</b> A margem acumulada caiu para <b>12,32%</b> (piso: 13%,13%) e zera os 40 pts. Recupere <b>R$&nbsp;231</b> de margem até 30/11.</div>
+        <div id="simAdviceBanner" class="advice-bar">ℹ️ Folga de margem acumulada no bloco: <b>+0,57 p.p.</b> (<b>R$&nbsp;352</b> de gordura disponível acima do piso de 12,73%).</div>
 
         <div style="font-size:11.5px; color:var(--text-muted); font-weight:700; text-transform:uppercase; margin-bottom:8px;">
           Degraus Rápidos — Clique para simular quanto faturar e ganhar pontos em dobro (2x):
         </div>
-        <div id="stepsList" class="steps-grid"><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">+2 pts (1 pos) (1º)</div><div style="font-size:13px; font-weight:800; color:#a3e635;">+R$&nbsp;27.000</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">+6 pts (3 pos) (1º)</div><div style="font-size:13px; font-weight:800; color:#a3e635;">+R$&nbsp;27.000</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">+10 pts (5 pos) (1º)</div><div style="font-size:13px; font-weight:800; color:#a3e635;">+R$&nbsp;27.000</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">Top 10 (1º)</div><div style="font-size:13px; font-weight:800; color:#a3e635;">+R$&nbsp;27.000</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">Top 5 (1º)</div><div style="font-size:13px; font-weight:800; color:#a3e635;">+R$&nbsp;27.000</div></div></div>
+        <div id="stepsList" class="steps-grid"><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">+2 pts (1 pos)</div><div style="font-size:12px; color:#64748b;">Trava MSV / &gt;600k</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">+6 pts (3 pos)</div><div style="font-size:12px; color:#64748b;">Trava MSV / &gt;600k</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">+10 pts (5 pos)</div><div style="font-size:12px; color:#64748b;">Trava MSV / &gt;600k</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">Top 10</div><div style="font-size:13px; font-weight:800; color:#4ade80;">✓ Já está (1º)</div></div><div class="step-chip"><div style="font-size:11px; color:var(--text-muted);">Top 5</div><div style="font-size:13px; font-weight:800; color:#4ade80;">✓ Já está (1º)</div></div></div>
       </div>
 
       <!-- RANKING TABLE -->
       <div class="card" style="padding:0; overflow:hidden;">
         <div style="padding:14px 20px; border-bottom:1px solid var(--border-card); display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px;">
           <div>
-            <strong style="font-size:15px; color:#fff;" id="tableTitle">Ranking Nacional Bloco Black (2x) — 02 - Carpintaria e Madeiras (47 Lojas)</strong>
-            <div style="font-size:12px; color:var(--text-muted);" id="tableSub">Média Nacional %: 110,3% (23 lojas acima) • Média Nacional R$: R$&nbsp;14.767 (18 lojas acima)</div>
+            <strong style="font-size:15px; color:#fff;" id="tableTitle">Ranking Nacional Bloco Black (2x) — 04 - Ferramentas (47 Lojas)</strong>
+            <div style="font-size:12px; color:var(--text-muted);" id="tableSub">Média Nacional %: -7,3% (25 lojas acima) • Média Nacional R$: -R$&nbsp;4.148 (25 lojas acima)</div>
           </div>
           <div style="display:flex; gap:8px; align-items:center;">
             <label style="font-size:12px; color:var(--text-muted); display:flex; align-items:center; gap:5px; cursor:pointer;">
@@ -677,662 +891,662 @@
                 <th>Pts Bloco (2x)</th>
               </tr>
             </thead>
-            <tbody id="rankingTbody"><tr>
+            <tbody id="rankingTbody"><tr class="my-store">
           <td><b>1º</b></td>
-          <td class="left">44-Campo Grande</td>
-          <td>R$&nbsp;50.835</td>
-          <td>R$&nbsp;9.602</td>
-          <td style="color:#4ade80; font-weight:700;">429,4%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">44</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;41.233</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">32</td>
-          <td style="font-weight:700; color:#e2e8f0;">24,31%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">76</td>
-        </tr><tr>
+          <td class="left">👉 35-Curitiba Atuba</td>
+          <td>R$&nbsp;61.680</td>
+          <td>R$&nbsp;40.702</td>
+          <td style="color:#4ade80; font-weight:700;">51,5%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">50</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;20.979</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">50</td>
+          <td style="font-weight:700; color:#e2e8f0;">13,30%</td>
+          <td style="color:#94a3b8; font-size:12px;">12,73%</td>
+          <td class="col-total">100</td>
+        </tr><tr class="rival-store doping-row">
           <td><b>2º</b></td>
-          <td class="left">21-Niteroi</td>
-          <td>R$&nbsp;42.723</td>
-          <td>R$&nbsp;6.921</td>
-          <td style="color:#4ade80; font-weight:700;">517,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">34-São José Do Rio Preto <span class="badge-rival">CONCORRENTE DIRETO • DOPING</span></td>
+          <td>R$&nbsp;63.396</td>
+          <td>R$&nbsp;51.204</td>
+          <td style="color:#4ade80; font-weight:700;">23,8%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">46</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;35.803</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">28</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,78%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">74</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;12.192</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">46</td>
+          <td style="font-weight:700; color:#ef4444;">12,37%</td>
+          <td style="color:#94a3b8; font-size:12px;">12,50%</td>
+          <td class="col-total"><span style="color:#fbbf24;">92</span></td>
         </tr><tr>
           <td><b>3º</b></td>
-          <td class="left">38-Fortaleza</td>
-          <td>R$&nbsp;55.214</td>
-          <td>R$&nbsp;12.816</td>
-          <td style="color:#4ade80; font-weight:700;">330,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">36</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;42.399</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">34</td>
-          <td style="font-weight:700; color:#e2e8f0;">21,81%</td>
+          <td class="left">07-Rio Norte</td>
+          <td>R$&nbsp;70.878</td>
+          <td>R$&nbsp;57.682</td>
+          <td style="color:#4ade80; font-weight:700;">22,9%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">44</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;13.197</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">48</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,31%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">70</td>
-        </tr><tr class="rival-store">
+          <td class="col-total">92</td>
+        </tr><tr>
           <td><b>4º</b></td>
-          <td class="left">59-Salvador <span class="badge-rival">CONCORRENTE DIRETO</span></td>
-          <td>R$&nbsp;43.845</td>
-          <td>R$&nbsp;8.378</td>
-          <td style="color:#4ade80; font-weight:700;">423,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">42</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;35.467</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">26</td>
-          <td style="font-weight:700; color:#e2e8f0;">20,59%</td>
-          <td style="color:#94a3b8; font-size:12px;">13,70%</td>
-          <td class="col-total">68</td>
+          <td class="left">76-Joinville</td>
+          <td>R$&nbsp;18.575</td>
+          <td>R$&nbsp;12.365</td>
+          <td style="color:#4ade80; font-weight:700;">50,2%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">48</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;6.211</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">36</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,65%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">84</td>
         </tr><tr>
           <td><b>5º</b></td>
-          <td class="left">32-São Leopoldo</td>
-          <td>R$&nbsp;40.778</td>
-          <td>R$&nbsp;8.402</td>
-          <td style="color:#4ade80; font-weight:700;">385,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">40</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;32.376</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">24</td>
-          <td style="font-weight:700; color:#e2e8f0;">-1,61%</td>
+          <td class="left">49-Natal</td>
+          <td>R$&nbsp;60.831</td>
+          <td>R$&nbsp;53.072</td>
+          <td style="color:#4ade80; font-weight:700;">14,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">38</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;7.759</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">42</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,48%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">64</td>
+          <td class="col-total">80</td>
         </tr><tr>
           <td><b>6º</b></td>
-          <td class="left">11-Rio Barra</td>
-          <td>R$&nbsp;64.020</td>
-          <td>R$&nbsp;17.539</td>
-          <td style="color:#4ade80; font-weight:700;">265,0%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">22</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;46.481</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td class="left">27-Sorocaba</td>
+          <td>R$&nbsp;81.660</td>
+          <td>R$&nbsp;72.475</td>
+          <td style="color:#4ade80; font-weight:700;">12,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">36</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,53%</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;9.185</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">44</td>
+          <td style="font-weight:700; color:#e2e8f0;">13,70%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">58</td>
+          <td class="col-total">80</td>
         </tr><tr>
           <td><b>7º</b></td>
-          <td class="left">67-Guarulhos</td>
-          <td>R$&nbsp;37.276</td>
-          <td>R$&nbsp;9.149</td>
-          <td style="color:#4ade80; font-weight:700;">307,4%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">09-Curitiba</td>
+          <td>R$&nbsp;55.144</td>
+          <td>R$&nbsp;47.711</td>
+          <td style="color:#4ade80; font-weight:700;">15,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">40</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;7.432</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">38</td>
+          <td style="font-weight:700; color:#e2e8f0;">10,12%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">78</td>
+        </tr><tr>
+          <td><b>8º</b></td>
+          <td class="left">50-Maceio</td>
+          <td>R$&nbsp;76.756</td>
+          <td>R$&nbsp;69.128</td>
+          <td style="color:#4ade80; font-weight:700;">11,0%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">30</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;7.629</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">40</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,16%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">70</td>
+        </tr><tr>
+          <td><b>9º</b></td>
+          <td class="left">02-Ribeirão Preto</td>
+          <td>R$&nbsp;40.819</td>
+          <td>R$&nbsp;36.241</td>
+          <td style="color:#4ade80; font-weight:700;">12,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">34</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;28.127</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">18</td>
-          <td style="font-weight:700; color:#e2e8f0;">19,68%</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;4.578</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">32</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,62%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">66</td>
+        </tr><tr>
+          <td><b>10º</b></td>
+          <td class="left">57-Vitória</td>
+          <td>R$&nbsp;47.893</td>
+          <td>R$&nbsp;43.088</td>
+          <td style="color:#4ade80; font-weight:700;">11,2%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">32</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;4.805</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">34</td>
+          <td style="font-weight:700; color:#e2e8f0;">21,35%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">66</td>
+        </tr><tr>
+          <td><b>11º</b></td>
+          <td class="left">78-Bauru</td>
+          <td>R$&nbsp;12.283</td>
+          <td>R$&nbsp;10.458</td>
+          <td style="color:#4ade80; font-weight:700;">17,5%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">42</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;1.825</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">20</td>
+          <td style="font-weight:700; color:#e2e8f0;">22,43%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">62</td>
+        </tr><tr>
+          <td><b>12º</b></td>
+          <td class="left">21-Niteroi</td>
+          <td>R$&nbsp;51.373</td>
+          <td>R$&nbsp;48.153</td>
+          <td style="color:#4ade80; font-weight:700;">6,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">28</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;3.220</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">28</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,11%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">56</td>
+        </tr><tr>
+          <td><b>13º</b></td>
+          <td class="left">24-Lar Center</td>
+          <td>R$&nbsp;52.374</td>
+          <td>R$&nbsp;49.286</td>
+          <td style="color:#4ade80; font-weight:700;">6,3%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">26</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;3.088</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">26</td>
+          <td style="font-weight:700; color:#e2e8f0;">14,47%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">52</td>
         </tr><tr>
-          <td><b>8º</b></td>
-          <td class="left">76-Joinville</td>
-          <td>R$&nbsp;21.211</td>
-          <td>R$&nbsp;4.911</td>
-          <td style="color:#4ade80; font-weight:700;">331,9%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">38</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;16.300</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">8</td>
-          <td style="font-weight:700; color:#e2e8f0;">16,77%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">46</td>
-        </tr><tr>
-          <td><b>9º</b></td>
-          <td class="left">12-Morumbi</td>
-          <td>R$&nbsp;58.010</td>
-          <td>R$&nbsp;22.064</td>
-          <td style="color:#4ade80; font-weight:700;">162,9%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">16</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;35.946</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">30</td>
-          <td style="font-weight:700; color:#e2e8f0;">23,70%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">46</td>
-        </tr><tr>
-          <td><b>10º</b></td>
-          <td class="left">07-Rio Norte</td>
-          <td>R$&nbsp;45.642</td>
-          <td>R$&nbsp;14.483</td>
-          <td style="color:#4ade80; font-weight:700;">215,1%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">18</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;31.159</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td><b>14º</b></td>
+          <td class="left">46-Tamboré</td>
+          <td>R$&nbsp;76.426</td>
+          <td>R$&nbsp;73.161</td>
+          <td style="color:#4ade80; font-weight:700;">4,5%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">20</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,98%</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;3.265</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">30</td>
+          <td style="font-weight:700; color:#e2e8f0;">19,53%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">38</td>
+          <td class="col-total">50</td>
         </tr><tr>
-          <td><b>11º</b></td>
-          <td class="left">49-Natal</td>
-          <td>R$&nbsp;14.649</td>
-          <td>R$&nbsp;3.628</td>
-          <td style="color:#4ade80; font-weight:700;">303,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">32</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;11.021</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">22,09%</td>
+          <td><b>15º</b></td>
+          <td class="left">42-Jaguaré</td>
+          <td>R$&nbsp;50.416</td>
+          <td>R$&nbsp;47.745</td>
+          <td style="color:#4ade80; font-weight:700;">5,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">24</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;2.672</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">22</td>
+          <td style="font-weight:700; color:#e2e8f0;">21,48%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">46</td>
+        </tr><tr>
+          <td><b>16º</b></td>
+          <td class="left">13-Brasília Sul</td>
+          <td>R$&nbsp;64.875</td>
+          <td>R$&nbsp;62.023</td>
+          <td style="color:#4ade80; font-weight:700;">4,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">22</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;2.852</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">24</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,57%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">46</td>
+        </tr><tr>
+          <td><b>17º</b></td>
+          <td class="left">67-Guarulhos</td>
+          <td>R$&nbsp;43.673</td>
+          <td>R$&nbsp;42.730</td>
+          <td style="color:#4ade80; font-weight:700;">2,2%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">18</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;943</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">18</td>
+          <td style="font-weight:700; color:#e2e8f0;">21,08%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">36</td>
+        </tr><tr>
+          <td><b>18º</b></td>
+          <td class="left">39-São José</td>
+          <td>R$&nbsp;33.506</td>
+          <td>R$&nbsp;33.275</td>
+          <td style="color:#4ade80; font-weight:700;">0,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">16</td>
+          <td style="color:#4ade80; font-weight:700;">R$&nbsp;231</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">16</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,72%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">32</td>
         </tr><tr>
-          <td><b>12º</b></td>
-          <td class="left">55-Taubaté</td>
-          <td>R$&nbsp;11.544</td>
-          <td>R$&nbsp;2.862</td>
-          <td style="color:#4ade80; font-weight:700;">303,4%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">30</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;8.682</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">17,58%</td>
+          <td><b>19º</b></td>
+          <td class="left">10-São Caetano</td>
+          <td>R$&nbsp;38.635</td>
+          <td>R$&nbsp;39.139</td>
+          <td style="color:#4ade80; font-weight:700;">-1,3%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">14</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;504</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">14</td>
+          <td style="font-weight:700; color:#e2e8f0;">20,68%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">30</td>
+          <td class="col-total">28</td>
         </tr><tr>
-          <td><b>13º</b></td>
-          <td class="left">19-Porto Alegre</td>
-          <td>R$&nbsp;56.030</td>
-          <td>R$&nbsp;23.999</td>
-          <td style="color:#4ade80; font-weight:700;">133,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td><b>20º</b></td>
+          <td class="left">15-São José Dos Campos</td>
+          <td>R$&nbsp;56.536</td>
+          <td>R$&nbsp;58.301</td>
+          <td style="color:#4ade80; font-weight:700;">-3,0%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">12</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;1.765</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">10</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,61%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">22</td>
+        </tr><tr>
+          <td><b>21º</b></td>
+          <td class="left">20-Bh Sul</td>
+          <td>R$&nbsp;29.792</td>
+          <td>R$&nbsp;31.299</td>
+          <td style="color:#4ade80; font-weight:700;">-4,8%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">8</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;32.031</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">22</td>
-          <td style="font-weight:700; color:#e2e8f0;">20,97%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">30</td>
-        </tr><tr>
-          <td><b>14º</b></td>
-          <td class="left">78-Bauru</td>
-          <td>R$&nbsp;16.982</td>
-          <td>R$&nbsp;4.385</td>
-          <td style="color:#4ade80; font-weight:700;">287,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">26</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;12.597</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,79%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">26</td>
-        </tr><tr>
-          <td><b>15º</b></td>
-          <td class="left">77-Jardim Botânico Df</td>
-          <td>R$&nbsp;17.147</td>
-          <td>R$&nbsp;4.499</td>
-          <td style="color:#4ade80; font-weight:700;">281,1%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">24</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;12.648</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">27,50%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">24</td>
-        </tr><tr>
-          <td><b>16º</b></td>
-          <td class="left">28-Brasília Norte</td>
-          <td>R$&nbsp;19.384</td>
-          <td>R$&nbsp;5.477</td>
-          <td style="color:#4ade80; font-weight:700;">253,9%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">20</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;13.906</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">8,92%</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;1.507</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">12</td>
+          <td style="font-weight:700; color:#e2e8f0;">19,55%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">20</td>
         </tr><tr>
-          <td><b>17º</b></td>
-          <td class="left">63-Poa Estaleiro</td>
-          <td>R$&nbsp;27.696</td>
-          <td>R$&nbsp;11.661</td>
-          <td style="color:#4ade80; font-weight:700;">137,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">10</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;16.036</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">6</td>
-          <td style="font-weight:700; color:#e2e8f0;">19,62%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">16</td>
-        </tr><tr>
-          <td><b>18º</b></td>
-          <td class="left">03-Campinas D. Pedro</td>
-          <td>R$&nbsp;51.980</td>
-          <td>R$&nbsp;28.446</td>
-          <td style="color:#f87171; font-weight:700;">82,7%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">0</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;23.533</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">16</td>
-          <td style="font-weight:700; color:#e2e8f0;">13,97%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">16</td>
-        </tr><tr>
-          <td><b>19º</b></td>
-          <td class="left">57-Vitória</td>
-          <td>R$&nbsp;23.185</td>
-          <td>R$&nbsp;8.931</td>
-          <td style="color:#4ade80; font-weight:700;">159,6%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">14</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;14.254</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">20,55%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">14</td>
-        </tr><tr>
-          <td><b>20º</b></td>
-          <td class="left">22-Anhanguera</td>
-          <td>R$&nbsp;46.642</td>
-          <td>R$&nbsp;24.101</td>
-          <td style="color:#f87171; font-weight:700;">93,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">0</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;22.541</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">14</td>
-          <td style="font-weight:700; color:#e2e8f0;">16,08%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">14</td>
-        </tr><tr>
-          <td><b>21º</b></td>
-          <td class="left">33-Londrina</td>
-          <td>R$&nbsp;13.571</td>
-          <td>R$&nbsp;5.358</td>
-          <td style="color:#4ade80; font-weight:700;">153,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">12</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;8.213</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">23,65%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">12</td>
-        </tr><tr>
           <td><b>22º</b></td>
-          <td class="left">58-Marginal Tietê 2</td>
-          <td>R$&nbsp;47.147</td>
-          <td>R$&nbsp;29.078</td>
-          <td style="color:#f87171; font-weight:700;">62,1%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">0</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;18.069</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td class="left">04-Contagem</td>
+          <td>R$&nbsp;58.608</td>
+          <td>R$&nbsp;60.758</td>
+          <td style="color:#4ade80; font-weight:700;">-3,5%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">10</td>
-          <td style="font-weight:700; color:#e2e8f0;">22,00%</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;2.150</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">8</td>
+          <td style="font-weight:700; color:#e2e8f0;">13,64%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">10</td>
+          <td class="col-total">18</td>
         </tr><tr>
           <td><b>23º</b></td>
-          <td class="left">10-São Caetano</td>
-          <td>R$&nbsp;22.325</td>
-          <td>R$&nbsp;9.923</td>
-          <td style="color:#4ade80; font-weight:700;">125,0%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">01-Interlagos</td>
+          <td>R$&nbsp;75.402</td>
+          <td>R$&nbsp;79.474</td>
+          <td style="color:#4ade80; font-weight:700;">-5,1%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">6</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;12.402</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">22,68%</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;4.072</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">2</td>
+          <td style="font-weight:700; color:#e2e8f0;">20,79%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
-          <td class="col-total">6</td>
+          <td class="col-total">8</td>
         </tr><tr>
           <td><b>24º</b></td>
-          <td class="left">56-Jundiaí</td>
-          <td>R$&nbsp;27.771</td>
-          <td>R$&nbsp;12.883</td>
-          <td style="color:#4ade80; font-weight:700;">115,6%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">4</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;14.888</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">2</td>
-          <td style="font-weight:700; color:#e2e8f0;">21,33%</td>
+          <td class="left">41-Anália Franco</td>
+          <td>R$&nbsp;36.141</td>
+          <td>R$&nbsp;39.374</td>
+          <td style="color:#f87171; font-weight:700;">-8,2%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">0</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;3.233</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">6</td>
+          <td style="font-weight:700; color:#e2e8f0;">18,01%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">6</td>
         </tr><tr>
           <td><b>25º</b></td>
-          <td class="left">05-Raposo Tavares</td>
-          <td>R$&nbsp;38.833</td>
-          <td>R$&nbsp;22.812</td>
-          <td style="color:#f87171; font-weight:700;">70,2%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">0</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;16.021</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td class="left">12-Morumbi</td>
+          <td>R$&nbsp;123.799</td>
+          <td>R$&nbsp;131.534</td>
+          <td style="color:#4ade80; font-weight:700;">-5,9%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">4</td>
-          <td style="font-weight:700; color:#e2e8f0;">19,96%</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;7.735</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">0</td>
+          <td style="font-weight:700; color:#e2e8f0;">21,64%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">4</td>
         </tr><tr>
           <td><b>26º</b></td>
-          <td class="left">36-Bh Norte</td>
-          <td>R$&nbsp;25.069</td>
-          <td>R$&nbsp;11.642</td>
-          <td style="color:#4ade80; font-weight:700;">115,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">2</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;13.427</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td class="left">56-Jundiaí</td>
+          <td>R$&nbsp;21.400</td>
+          <td>R$&nbsp;24.855</td>
+          <td style="color:#f87171; font-weight:700;">-13,9%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">21,97%</td>
+          <td style="color:#4ade80; font-weight:700;">-R$&nbsp;3.455</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">4</td>
+          <td style="font-weight:700; color:#e2e8f0;">21,95%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td class="col-total">4</td>
+        </tr><tr>
+          <td><b>27º</b></td>
+          <td class="left">38-Fortaleza</td>
+          <td>R$&nbsp;91.346</td>
+          <td>R$&nbsp;97.945</td>
+          <td style="color:#4ade80; font-weight:700;">-6,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
+          <td class="col-pts">2</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;6.598</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
+          <td class="col-pts">0</td>
+          <td style="font-weight:700; color:#e2e8f0;">19,73%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">2</td>
-        </tr><tr class="my-store doping-row">
-          <td><b>27º</b></td>
-          <td class="left">👉 35-Curitiba Atuba <span class="badge-dop">DOPING</span></td>
-          <td>R$&nbsp;28.558</td>
-          <td>R$&nbsp;7.166</td>
-          <td style="color:#4ade80; font-weight:700;">298,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
-          <td class="col-pts">0</td>
-          <td style="color:#4ade80; font-weight:700;">R$&nbsp;21.392</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
-          <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#ef4444;">12,32%</td>
-          <td style="color:#94a3b8; font-size:12px;">13,13%</td>
-          <td class="col-total">0</td>
         </tr><tr>
           <td><b>28º</b></td>
-          <td class="left">09-Curitiba</td>
-          <td>R$&nbsp;30.601</td>
-          <td>R$&nbsp;16.729</td>
-          <td style="color:#f87171; font-weight:700;">82,9%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">16-Ricardo Jafet</td>
+          <td>R$&nbsp;52.747</td>
+          <td>R$&nbsp;57.132</td>
+          <td style="color:#f87171; font-weight:700;">-7,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;13.873</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;4.385</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">9,05%</td>
+          <td style="font-weight:700; color:#e2e8f0;">23,22%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>29º</b></td>
-          <td class="left">24-Lar Center</td>
-          <td>R$&nbsp;20.933</td>
-          <td>R$&nbsp;11.705</td>
-          <td style="color:#f87171; font-weight:700;">78,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">28-Brasília Norte</td>
+          <td>R$&nbsp;54.896</td>
+          <td>R$&nbsp;59.935</td>
+          <td style="color:#f87171; font-weight:700;">-8,4%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;9.228</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;5.039</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,10%</td>
+          <td style="font-weight:700; color:#e2e8f0;">15,87%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>30º</b></td>
-          <td class="left">45-São Bernardo</td>
-          <td>R$&nbsp;35.716</td>
-          <td>R$&nbsp;21.244</td>
-          <td style="color:#f87171; font-weight:700;">68,1%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">58-Marginal Tietê 2</td>
+          <td>R$&nbsp;102.584</td>
+          <td>R$&nbsp;115.136</td>
+          <td style="color:#f87171; font-weight:700;">-10,9%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;14.473</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;12.552</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">15,76%</td>
+          <td style="font-weight:700; color:#e2e8f0;">19,87%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
-        </tr><tr class="rival-store doping-row">
+        </tr><tr>
           <td><b>31º</b></td>
-          <td class="left">34-São José Do Rio Preto <span class="badge-rival">MONITORADA</span></td>
-          <td>R$&nbsp;11.292</td>
-          <td>R$&nbsp;6.716</td>
-          <td style="color:#f87171; font-weight:700;">68,1%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">11-Rio Barra</td>
+          <td>R$&nbsp;63.313</td>
+          <td>R$&nbsp;72.708</td>
+          <td style="color:#f87171; font-weight:700;">-12,9%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;4.575</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;9.395</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#ef4444;">10,23%</td>
-          <td style="color:#94a3b8; font-size:12px;">11,79%</td>
+          <td style="font-weight:700; color:#e2e8f0;">18,83%</td>
+          <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>32º</b></td>
-          <td class="left">15-São José Dos Campos</td>
-          <td>R$&nbsp;31.263</td>
-          <td>R$&nbsp;19.236</td>
-          <td style="color:#f87171; font-weight:700;">62,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">32-São Leopoldo</td>
+          <td>R$&nbsp;41.389</td>
+          <td>R$&nbsp;47.815</td>
+          <td style="color:#f87171; font-weight:700;">-13,4%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;12.027</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;6.426</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,79%</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,96%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>33º</b></td>
-          <td class="left">13-Brasília Sul</td>
-          <td>R$&nbsp;21.891</td>
-          <td>R$&nbsp;14.070</td>
-          <td style="color:#f87171; font-weight:700;">55,6%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">03-Campinas D. Pedro</td>
+          <td>R$&nbsp;66.468</td>
+          <td>R$&nbsp;78.832</td>
+          <td style="color:#f87171; font-weight:700;">-15,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;7.821</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;12.364</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">23,29%</td>
+          <td style="font-weight:700; color:#e2e8f0;">22,45%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>34º</b></td>
-          <td class="left">20-Bh Sul</td>
-          <td>R$&nbsp;8.868</td>
-          <td>R$&nbsp;5.776</td>
-          <td style="color:#f87171; font-weight:700;">53,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">62-Santos</td>
+          <td>R$&nbsp;44.071</td>
+          <td>R$&nbsp;52.296</td>
+          <td style="color:#f87171; font-weight:700;">-15,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;3.092</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;8.225</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">22,98%</td>
+          <td style="font-weight:700; color:#e2e8f0;">22,17%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>35º</b></td>
-          <td class="left">41-Anália Franco</td>
-          <td>R$&nbsp;12.251</td>
-          <td>R$&nbsp;8.094</td>
-          <td style="color:#f87171; font-weight:700;">51,4%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">44-Campo Grande</td>
+          <td>R$&nbsp;34.446</td>
+          <td>R$&nbsp;41.600</td>
+          <td style="color:#f87171; font-weight:700;">-17,2%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;4.158</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;7.153</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">24,11%</td>
+          <td style="font-weight:700; color:#e2e8f0;">18,45%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>36º</b></td>
-          <td class="left">01-Interlagos</td>
-          <td>R$&nbsp;23.929</td>
-          <td>R$&nbsp;16.081</td>
-          <td style="color:#f87171; font-weight:700;">48,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">19-Porto Alegre</td>
+          <td>R$&nbsp;51.223</td>
+          <td>R$&nbsp;63.060</td>
+          <td style="color:#f87171; font-weight:700;">-18,8%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;7.848</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;11.837</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">3,56%</td>
+          <td style="font-weight:700; color:#e2e8f0;">19,86%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>37º</b></td>
-          <td class="left">42-Jaguaré</td>
-          <td>R$&nbsp;13.734</td>
-          <td>R$&nbsp;9.505</td>
-          <td style="color:#f87171; font-weight:700;">44,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">05-Raposo Tavares</td>
+          <td>R$&nbsp;89.992</td>
+          <td>R$&nbsp;115.288</td>
+          <td style="color:#f87171; font-weight:700;">-21,9%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;4.229</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;25.296</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">26,71%</td>
+          <td style="font-weight:700; color:#e2e8f0;">20,15%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>38º</b></td>
-          <td class="left">29-Uberlândia</td>
-          <td>R$&nbsp;6.633</td>
-          <td>R$&nbsp;4.833</td>
-          <td style="color:#f87171; font-weight:700;">37,2%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">45-São Bernardo</td>
+          <td>R$&nbsp;67.736</td>
+          <td>R$&nbsp;88.712</td>
+          <td style="color:#f87171; font-weight:700;">-23,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;1.800</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;20.976</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">14,98%</td>
+          <td style="font-weight:700; color:#e2e8f0;">19,37%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>39º</b></td>
-          <td class="left">46-Tamboré</td>
-          <td>R$&nbsp;32.275</td>
-          <td>R$&nbsp;25.659</td>
-          <td style="color:#f87171; font-weight:700;">25,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">77-Jardim Botânico Df</td>
+          <td>R$&nbsp;19.856</td>
+          <td>R$&nbsp;26.034</td>
+          <td style="color:#f87171; font-weight:700;">-23,7%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;6.617</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;6.179</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,68%</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,12%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>40º</b></td>
-          <td class="left">62-Santos</td>
-          <td>R$&nbsp;17.946</td>
-          <td>R$&nbsp;15.031</td>
-          <td style="color:#f87171; font-weight:700;">19,4%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">36-Bh Norte</td>
+          <td>R$&nbsp;52.131</td>
+          <td>R$&nbsp;69.603</td>
+          <td style="color:#f87171; font-weight:700;">-25,1%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;2.915</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;17.472</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">14,61%</td>
+          <td style="font-weight:700; color:#e2e8f0;">15,42%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>41º</b></td>
-          <td class="left">27-Sorocaba</td>
-          <td>R$&nbsp;28.895</td>
-          <td>R$&nbsp;24.796</td>
-          <td style="color:#f87171; font-weight:700;">16,5%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">63-Poa Estaleiro</td>
+          <td>R$&nbsp;19.612</td>
+          <td>R$&nbsp;26.789</td>
+          <td style="color:#f87171; font-weight:700;">-26,8%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;4.099</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;7.177</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">-114,82%</td>
+          <td style="font-weight:700; color:#e2e8f0;">25,24%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>42º</b></td>
-          <td class="left">18-Goiania</td>
-          <td>R$&nbsp;13.231</td>
-          <td>R$&nbsp;11.577</td>
-          <td style="color:#f87171; font-weight:700;">14,3%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">22-Anhanguera</td>
+          <td>R$&nbsp;52.105</td>
+          <td>R$&nbsp;71.662</td>
+          <td style="color:#f87171; font-weight:700;">-27,3%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;1.654</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;19.556</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">23,09%</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,69%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>43º</b></td>
-          <td class="left">04-Contagem</td>
-          <td>R$&nbsp;17.815</td>
-          <td>R$&nbsp;15.672</td>
-          <td style="color:#f87171; font-weight:700;">13,7%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">29-Uberlândia</td>
+          <td>R$&nbsp;27.391</td>
+          <td>R$&nbsp;37.853</td>
+          <td style="color:#f87171; font-weight:700;">-27,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;2.143</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;10.463</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">18,77%</td>
+          <td style="font-weight:700; color:#e2e8f0;">21,95%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
-        </tr><tr>
+        </tr><tr class="rival-store">
           <td><b>44º</b></td>
-          <td class="left">50-Maceio</td>
-          <td>R$&nbsp;19.673</td>
-          <td>R$&nbsp;18.603</td>
-          <td style="color:#f87171; font-weight:700;">5,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">59-Salvador <span class="badge-rival">MONITORADA</span></td>
+          <td>R$&nbsp;45.178</td>
+          <td>R$&nbsp;66.084</td>
+          <td style="color:#f87171; font-weight:700;">-31,6%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">R$&nbsp;1.070</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;20.907</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">19,46%</td>
-          <td style="color:#94a3b8; font-size:12px;">-</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,92%</td>
+          <td style="color:#94a3b8; font-size:12px;">12,65%</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>45º</b></td>
-          <td class="left">39-São José</td>
-          <td>R$&nbsp;15.292</td>
-          <td>R$&nbsp;18.751</td>
-          <td style="color:#f87171; font-weight:700;">-18,4%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">18-Goiania</td>
+          <td>R$&nbsp;37.773</td>
+          <td>R$&nbsp;65.365</td>
+          <td style="color:#f87171; font-weight:700;">-42,2%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">-R$&nbsp;3.459</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;27.591</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">19,52%</td>
+          <td style="font-weight:700; color:#e2e8f0;">16,87%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>46º</b></td>
-          <td class="left">16-Ricardo Jafet</td>
-          <td>R$&nbsp;10.863</td>
-          <td>R$&nbsp;18.652</td>
-          <td style="color:#f87171; font-weight:700;">-41,8%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">55-Taubaté</td>
+          <td>R$&nbsp;21.017</td>
+          <td>R$&nbsp;39.008</td>
+          <td style="color:#f87171; font-weight:700;">-46,1%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">-R$&nbsp;7.790</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;17.991</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">14,03%</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,50%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr><tr>
           <td><b>47º</b></td>
-          <td class="left">02-Ribeirão Preto</td>
-          <td>R$&nbsp;1.938</td>
-          <td>R$&nbsp;15.198</td>
-          <td style="color:#f87171; font-weight:700;">-87,2%</td>
-          <td style="color:#94a3b8; font-size:12px;">110,3%</td>
+          <td class="left">33-Londrina</td>
+          <td>R$&nbsp;24.983</td>
+          <td>R$&nbsp;50.000</td>
+          <td style="color:#f87171; font-weight:700;">-50,0%</td>
+          <td style="color:#94a3b8; font-size:12px;">-7,3%</td>
           <td class="col-pts">0</td>
-          <td style="color:#f87171; font-weight:700;">-R$&nbsp;13.260</td>
-          <td style="color:#94a3b8; font-size:12px;">R$&nbsp;14.767</td>
+          <td style="color:#f87171; font-weight:700;">-R$&nbsp;25.017</td>
+          <td style="color:#94a3b8; font-size:12px;">-R$&nbsp;4.148</td>
           <td class="col-pts">0</td>
-          <td style="font-weight:700; color:#e2e8f0;">-29,48%</td>
+          <td style="font-weight:700; color:#e2e8f0;">17,00%</td>
           <td style="color:#94a3b8; font-size:12px;">-</td>
           <td class="col-total">0</td>
         </tr></tbody>
@@ -1629,6 +1843,16 @@
       </div>
     </div>
 
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 3: ONE-PAGE EXECUTIVO (VISÃO CONSOLIDADA CLARA PARA PRINT)       -->
+    <!-- ===================================================================== -->
+    <div id="viewOnePage">
+      <div class="op-meta-strip" id="opMetaStrip"></div>
+      <div class="op-duels-grid" id="opDuelsContainer"></div>
+      <div class="op-top5-grid" id="opTop5Container"></div>
+    </div>
+
   </div>
 
   <!-- IMPORT MODAL -->
@@ -1864,7 +2088,7 @@
 
     const OFFICIAL_EXPURGO_LMS = {"86789262": {"s": "01-Materiais", "d": "86789262 - *PARAF C/VEDAÇÃO  5/16X180 KIT C/10UN UX"}, "87458462": {"s": "01-Materiais", "d": "87458462 - *GANCHO P/ESTRURURA METAL.S140 KIT10PÇ U"}, "87784536": {"s": "01-Materiais", "d": "87784536 - KIT CONCERTINA SIMPLES 30 CM Ø - ROLO 5M"}, "89158860": {"s": "01-Materiais", "d": "89158860 - CHAPA OSB TAPUME 12X1220X2200"}, "89159511": {"s": "01-Materiais", "d": "89159511 - *KIT FIX P/TELHAS ONDUCLAIR C/14"}, "89341616": {"s": "01-Materiais", "d": "89341616 - TELHA PVC PLAN 2,42X0,88M MARF PRECON"}, "89618375": {"s": "01-Materiais", "d": "89618375 - *KIT DE CONCERTINA CLIPADA DE Ø45 10M"}, "89856921": {"s": "01-Materiais", "d": "89856921 - *PARAF AUTBROC SEXTAV 1 1/2 25MM 100UN A"}, "90211940": {"s": "01-Materiais", "d": "*PARAF PA DRYWALL TTPC25 CX1000 PLACO"}, "90651120": {"s": "01-Materiais", "d": "Sarrafo de 5 eucalito bruto"}, "90957160": {"s": "01-Materiais", "d": "*cj4 pçs suporte 35x25x2mm minu"}, "90957174": {"s": "01-Materiais", "d": "*cj8 pçs suporte 20x20x15x1,8mm minu"}, "90957181": {"s": "01-Materiais", "d": "*cj4 pçs suporte ajust 30x20x20x2mm minu"}, "90957195": {"s": "01-Materiais", "d": "*cj4 pçs junç dobra 40x20x1mm minu"}, "90957202": {"s": "01-Materiais", "d": "*cj2 pçs junç reta 30x60x2mm minu"}, "90957216": {"s": "01-Materiais", "d": "*cj2 pçs suporte ajust 40x30mm minu"}, "90957223": {"s": "01-Materiais", "d": "*cj2 pçs suporte ajust 60x30mm minu"}, "90957230": {"s": "01-Materiais", "d": "*cj2 pçs junç reta ajust 20x150mm minu"}, "90957244": {"s": "01-Materiais", "d": "*cj2 pçs junç dobra 20x50x50x2,5mm minu"}, "90957265": {"s": "01-Materiais", "d": "*junç angular reforçada 20x100x2mm minu"}, "90957272": {"s": "01-Materiais", "d": "*cj2 pçs junç cantoneira 30x30x2mm minu"}, "90957286": {"s": "01-Materiais", "d": "*junç reta pesada 40x90x2,5mm minu"}, "90957293": {"s": "01-Materiais", "d": "*cj2 pçs junç cantoneira 40x45x2,5mm min"}, "90957391": {"s": "01-Materiais", "d": "*junç reta 40x180x2,5mm minu"}, "90957426": {"s": "01-Materiais", "d": "*junç dobra perfu 20x100x4mm minu"}, "90957440": {"s": "01-Materiais", "d": "*junç reta pesada 130x55x2,5 mm minu"}, "90957454": {"s": "01-Materiais", "d": "*junç dobra pesada 65x 55x2,5 mm minu"}, "90957461": {"s": "01-Materiais", "d": "*junç reta euca 85x85x65 mm minu"}, "90957475": {"s": "01-Materiais", "d": "*junç dobra euca 85x 85x65mm minu"}, "90957496": {"s": "01-Materiais", "d": "*junç moldada euca 85x85x65mm minu"}, "90957503": {"s": "01-Materiais", "d": "*junç moldada/plana euca 85x85x65mm minu"}, "91802011": {"s": "01-Materiais", "d": "*conect anti-racha quad 6x5cm minu"}, "91802032": {"s": "01-Materiais", "d": "*conect anti-racha quad 10x10cm minu"}, "91833630": {"s": "01-Materiais", "d": "91833630 - *LONA MULTIUSO PE VD 240G 6X10M COM ILHÓ"}, "91843346": {"s": "01-Materiais", "d": "91843346 - MINI BIGBAG ENTULHO 50 KG"}, "91843353": {"s": "01-Materiais", "d": "91843353 - BIGBAG P 400 KG"}, "91843360": {"s": "01-Materiais", "d": "91843360 - BIGBAG G 1 TON"}, "92194760": {"s": "01-Materiais", "d": "Painel acústico scure 1m² cinza db"}, "92194774": {"s": "01-Materiais", "d": "Painel acustico scure 1m² preto db"}, "92194781": {"s": "01-Materiais", "d": "Painel acustico scure 1m² bege db"}, "92324134": {"s": "01-Materiais", "d": "REBOTECFLEX 20KG PISCINA E TANQUE"}, "92324155": {"s": "01-Materiais", "d": "*ARGAMASSA SUPERLEVE 10KG"}, "87198265": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM PA BCO 216X78X4"}, "87198272": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM PA BCO 216X88X4"}, "87203116": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM JVC/JC BCO 100X150"}, "87203130": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO AL BC JVC/JC 120X150"}, "87203151": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM JVC/JC BCO 120X200"}, "87203200": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM PTA COR PC BCO 218X160"}, "87204845": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALU JVC/JC BCO100X120 120X100"}, "87204866": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM JVC/JC BCO 100X200"}, "87205062": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM PTA COR PC BCO 218X200"}, "87752483": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNICAO ALUM BCO 217X98"}, "88152841": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNIÇÃO P/PIVOTANTE MAD 223,5X126,2X1"}, "88152904": {"s": "02-Carpintaria e Madeiras", "d": "*GUARNIÇÃO P/ PIVOTANTE BR 223,5X126,2X1"}, "89176262": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 2F VD C/FEC 215X200."}, "89176283": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 2F VD C/FEC 215X150"}, "89176325": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 4F VD S/FEC 215X300"}, "89176416": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 3F VEN C/FEC 215X200"}, "89176423": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 3F VEN C/FEC 215X150"}, "89176430": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 3F VEN C/FEC 215X120"}, "89176724": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 3F VD C/FEC 215X200"}, "89177536": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 120X200 BC"}, "89177543": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 120X150 BC"}, "89177564": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 100X200 BC"}, "89177585": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 100X150 BC"}, "89177592": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 100X120 BC"}, "89177634": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER IDEA 215X200 BC"}, "89177641": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER IDEA 215X150 BC"}, "89177662": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA IDEA 215X88 BC"}, "89177795": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE MAXIM-AR IDEA 100X80 BC"}, "89177830": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE MAXIM-AR IDEA 60X120 BC"}, "89296333": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA INGRESSO 1F VD BOR 215X88 DIR"}, "89296340": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA INGRESSO 1F VD BOR 215X88 ESQ"}, "89302934": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F VENEZIANA VENT 210X70D"}, "89302941": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F VENEZIANA VENT 210X60D"}, "89302962": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F VENEZIANA VENT 210X80E"}, "89302976": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F VENEZIANA VENT 210X70E"}, "89302983": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F VENEZIANA VENT 210X60E"}, "89303004": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F LAMBRI 210X70D"}, "89303025": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F LAMBRI 210X70E"}, "89303032": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA LAMBRI 1F 215X88 DIR"}, "89303046": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA LAMBRI 1F 215X88 ESQ"}, "89303053": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA LAMBRI 1F PUX 215X98 DIR"}, "89303060": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA LAMBRI 1F PUX 215X98 ESQ"}, "89303116": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA INGRESSO 1F VD INC  215X88 DIR"}, "89303123": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA INGRESSO 1F VD INC  215X88 ESQ"}, "89341175": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INTEGRADA VEN ACUST 110V3F240X200X1"}, "89341182": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INT VEN ACUST AL BCO 220V 3F 240X16"}, "89341196": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INT VEN ACUST AL BCO 220V 3F 240X20"}, "89341210": {"s": "02-Carpintaria e Madeiras", "d": "*PTA CORRER ACUSTICA 2F 220X160X11"}, "89341224": {"s": "02-Carpintaria e Madeiras", "d": "*PTA CORRER ACUSTICA 2F 220X200X11"}, "89361006": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F POSTIGO 210X80D"}, "89361013": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F POSTIGO 210X80E"}, "89361020": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F BASCULANTE 210X86D"}, "89361055": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME 1F BASCULANTE 210X80E"}, "89382300": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INTEG VEN ALFORT VTI 3F BCO 237X150"}, "89481861": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INTERNA ALM BCO 215X88X10D"}, "89481903": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INTERNA ALM BCO 215X88X14D"}, "89481910": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INTERNA ALM BCO 215X88X14E"}, "89481952": {"s": "02-Carpintaria e Madeiras", "d": "*PTA INTERNA ALM MOG 215X88X10E"}, "89505801": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA IDEA 215X98 BC"}, "89505815": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE  PORTA CAMARÃO IDEA 215X88 BC"}, "89505864": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE  JANELA VENEZA 120X200 BC"}, "89505871": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE  JANELA VENEZA 120X150 PT"}, "89505885": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA VENEZA 120X150 BC"}, "89505913": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA VENEZA 100X150 PT"}, "89505920": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE  JANELA VENEZA 100X150 BC"}, "89505962": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA 235X150 BC"}, "89505976": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA 215X200 PT"}, "89505990": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA 215X200 PT"}, "89506004": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA 215X200 BC"}, "89506011": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA 215X150 BC"}, "89506046": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 3F VD S/FEC 215X200"}, "89830790": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 4F VD C/FEC 215X150"}, "90944315": {"s": "02-Carpintaria e Madeiras", "d": "*TOLDO CALIMA MANUAL 3X2M LISTRADO CX BC"}, "90948270": {"s": "02-Carpintaria e Madeiras", "d": "*TOLDO ZEFIR MOTOR 2.95X2.5M BG CX BCA"}, "90948291": {"s": "02-Carpintaria e Madeiras", "d": "*TOLDO BALCONY MANUAL 2.5X2.5M BEGE BCO"}, "90969830": {"s": "02-Carpintaria e Madeiras", "d": "*GUA PORTA DE CORRER -220X160X4 ALUM BCO"}, "90969865": {"s": "02-Carpintaria e Madeiras", "d": "*GUA JANELA DE CORRER -140X200X4 ALUM BC"}, "90969872": {"s": "02-Carpintaria e Madeiras", "d": "*GUA PORTA INT -240,5X160X4 ALUM BCO"}, "90969900": {"s": "02-Carpintaria e Madeiras", "d": "*GUA JANELA VEN INTEGRADA-140,5X200X4 AL"}, "90969914": {"s": "02-Carpintaria e Madeiras", "d": "*GUA JANELA DE CORRER -120X150X4 ALUM BC"}, "90969921": {"s": "02-Carpintaria e Madeiras", "d": "*GUA JANELA DE CORRER -120X200X4 ALUM BC"}, "91003920": {"s": "02-Carpintaria e Madeiras", "d": "VEN 3F VIVACE BCO 100X120"}, "91003934": {"s": "02-Carpintaria e Madeiras", "d": "VEN 3F VIVACE BCO 100X150"}, "91089810": {"s": "02-Carpintaria e Madeiras", "d": "*PTA PIV MPONTO SOCIALE BCO 270X120 D"}, "91089824": {"s": "02-Carpintaria e Madeiras", "d": "*PTA PIV MPONTO SOCIALE BCO 270X120 E"}, "91089831": {"s": "02-Carpintaria e Madeiras", "d": "*PTA PIV MPONTO SOCIALE BCO 235X120 D"}, "91807835": {"s": "02-Carpintaria e Madeiras", "d": "*PTA HOME BALCÃO 2F VD C/FEC 150X210 3A"}, "91863800": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 2F VD C/FEC PTO 215X150"}, "91863856": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA BALCÃO 3F VD C/FEC PTO 215X200"}, "92095703": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE MAXIM-AR VENEZA 1F BCO 60X80"}, "92095885": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA SOCIALE MAD 120X215"}, "92096011": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA VENEZA MAD 120X150"}, "92096046": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA BCO 215X15"}, "92096060": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER VENEZA MAD 235X15"}, "92132033": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA GIARDINO CORRER 3F CZ 215X150"}, "92132054": {"s": "02-Carpintaria e Madeiras", "d": "*PTA IDEA LAMBRI 1F PUX CZ 215X98 DIR"}, "92132110": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 120X120 CZ"}, "92132215": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA CORRER IDEA 215X150 CZ"}, "92132243": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE PORTA IDEA 215X98 CZ"}, "92132376": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 100X150 PT"}, "92132383": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE JANELA IDEA 100X200 PT"}, "92132432": {"s": "02-Carpintaria e Madeiras", "d": "*ARREMATE MAXIM-AR IDEA 60X60 PT"}, "91912324": {"s": "03-Eletricidade", "d": "Ventilador de Mesa Arno VF42 40cm 6 pás 126W 127V (110V)"}, "91912331": {"s": "03-Eletricidade", "d": "Ventilador de Mesa Arno VF42 40cm 6 pás 126W 220V"}, "92291500": {"s": "03-Eletricidade", "d": "Evap Eco Dream Inv 9K FR H.Wall WIFI 220"}, "92291514": {"s": "03-Eletricidade", "d": "Cond Eco Dream Inv 9K FR H.Wall WIFI 220"}, "92361514": {"s": "03-Eletricidade", "d": "Evap Split Eco Inverter 9K Frio 220v"}, "92361521": {"s": "03-Eletricidade", "d": "Cond Split Eco Inverter 9K Frio 220v"}, "92416345": {"s": "03-Eletricidade", "d": "EVAP INVERTER ECOMASTER MIDEA 9K FRIO"}, "92416352": {"s": "03-Eletricidade", "d": "COND INVERTER ECOMASTER MIDEA 9K FRIO"}, "92416366": {"s": "03-Eletricidade", "d": "EVAP INVERTER ECOMASTER MIDEA 9K Q/F"}, "92416373": {"s": "03-Eletricidade", "d": "COND INVERTER ECOMASTER MIDEA 9K Q/F"}, "92416380": {"s": "03-Eletricidade", "d": "EVAP INVERTER ECOMASTER MIDEA 12K FRIO"}, "92416394": {"s": "03-Eletricidade", "d": "COND INVERTER ECOMASTER MIDEA 12K FRIO"}, "92416401": {"s": "03-Eletricidade", "d": "EVAP INVERTER ECOMASTER MIDEA 12K Q/F"}, "92416415": {"s": "03-Eletricidade", "d": "COND INVERTER ECOMASTER MIDEA 12K Q/F"}, "92416464": {"s": "03-Eletricidade", "d": "EVAP INVERTER ECOMASTER MIDEA 24K FRIO"}, "92416471": {"s": "03-Eletricidade", "d": "COND INVERTER  ECOMASTER MIDEA 24K FRIO"}, "92416485": {"s": "03-Eletricidade", "d": "EVAP INVERTER ECOMASTER MIDEA 24 Q/F"}, "92416492": {"s": "03-Eletricidade", "d": "COND INVERTER ECOMASTER MIDEA 24KQ/F"}, "92468341": {"s": "03-Eletricidade", "d": "Cond Split 9K BTUs AirVolution F Midea"}, "92468355": {"s": "03-Eletricidade", "d": "Evap Split 9K BTUs AirVolution F Midea"}, "92468362": {"s": "03-Eletricidade", "d": "Cond Split 12K BTUs AirVolution F Midea"}, "92468376": {"s": "03-Eletricidade", "d": "Evap Split 12K BTUs AirVolution F Midea"}, "92468383": {"s": "03- Eletricidade", "d": "Cond split 18k btus airvolution f midea"}, "92468390": {"s": "03- Eletricidade", "d": "Evap split 18k btus airvolution f midea"}, "92468404": {"s": "03-Eletricidade", "d": "Cond Split 22K BTUs AirVolution F Midea"}, "92468411": {"s": "03-Eletricidade", "d": "Evap Split 22K BTUs AirVolution F Midea"}, "92468425": {"s": "03-Eletricidade", "d": "Cond Split 9KBTUs AI AirVolution F Midea"}, "92468432": {"s": "03-Eletricidade", "d": "Evap Split 9KBTUs AI AirVolution F Midea"}, "92468446": {"s": "03-Eletricidade", "d": "Cond Split 12KBTU AI AirVolution F Midea"}, "92468453": {"s": "03-Eletricidade", "d": "Evap Split 12KBTU AI AirVolution F Midea"}, "92472772": {"s": "03-Eletricidade", "d": "Evap Eco Inv III WIFI 9KBtus F 220v"}, "92472786": {"s": "03-Eletricidade", "d": "Cond Eco Inv III WIFI 9KBtus F 220v"}, "92473773": {"s": "03- Eletricidade", "d": "Evap eco inv iii wifi 9k btus q/f 220v"}, "92473780": {"s": "03- Eletricidade", "d": "Cond eco inv iii wifi 9k btus q/f 220v"}, "92474564": {"s": "03-Eletricidade", "d": "CONDENSADOR AIWA AWS-C-9F 220V"}, "92474571": {"s": "03-Eletricidade", "d": "EVAPORADOR AIWA AWS-EV-9F 220V"}, "92474585": {"s": "03-Eletricidade", "d": "CONDENSADOR AIWA AWS-C-9QF 220V"}, "92474592": {"s": "03-Eletricidade", "d": "EVAPORADOR AIWA AWS-EV-9QF 220V"}, "92474606": {"s": "03-Eletricidade", "d": "CONDENSADOR AIWA AWS-C-12F 220V"}, "92474613": {"s": "03-Eletricidade", "d": "EVAPORADOR AIWA AWS-EV-12F 220V"}, "92474620": {"s": "03-Eletricidade", "d": "CONDENSADOR AIWA AWS-C-12QF 220V"}, "92474634": {"s": "03-Eletricidade", "d": "EVAPORADOR AIWA AWS-EV-12QF 220V"}, "92474641": {"s": "03-Eletricidade", "d": "CONDENSADOR AIWA AWS-C-18F 220V"}, "92474655": {"s": "03-Eletricidade", "d": "EVAPORADOR AIWA AWS-EV-18F 220V"}, "92474683": {"s": "03-Eletricidade", "d": "CONDENSADOR AIWA AWS-C-24F 220V"}, "92474690": {"s": "03-Eletricidade", "d": "EVAPORADOR AIWA AWS-EV-24F 220V"}, "92531922": {"s": "03-Eletricidade", "d": "Evap Midea Inverter Lite 9K Frio"}, "92531936": {"s": "03-Eletricidade", "d": "Cond Midea Inverter Lite 9K Frio"}, "92532006": {"s": "03-Eletricidade", "d": "Evap Split 9K AI AirVolution Frio Midea"}, "92532013": {"s": "03-Eletricidade", "d": "Cond Split 9K AI AirVolution Frio Midea"}, "92532020": {"s": "03-Eletricidade", "d": "Evap Split 12K AI AirVolution Frio Midea"}, "92532034": {"s": "03-Eletricidade", "d": "Cond Split 12K AI AirVolution Frio Midea"}, "92532083": {"s": "03-Eletricidade", "d": "Evap Midea AI Ecomaster 9K Frio"}, "92532090": {"s": "03-Eletricidade", "d": "Cond Midea AI Ecomaster 9K Frio"}, "92532125": {"s": "03-Eletricidade", "d": "Evap Midea AI Ecomaster 12K Frio"}, "92532132": {"s": "03-Eletricidade", "d": "Cond Midea AI Ecomaster 12K Frio"}, "87445190": {"s": "04-Ferramentas", "d": "*jogo ferramentas mayle 110 pcs"}, "89716060": {"s": "04-Ferramentas", "d": "*kit ferr banc 111pç crv c/maleta dexter"}, "89716123": {"s": "04-Ferramentas", "d": "*kit ferr banc 108pç crv c/maleta dexter"}, "89856312": {"s": "04-Ferramentas", "d": "*kit ferramentas drywall 16 peças dexter"}, "89995605": {"s": "04-Ferramentas", "d": "*martelo unha 23mm cabo metalico vonder"}, "89995633": {"s": "04-Ferramentas", "d": "*martelo unha 20mm cabo fibra vonder"}, "90345220": {"s": "04-Ferramentas", "d": "*alicate universal 8\" tramontina"}, "90363525": {"s": "04-Ferramentas", "d": "*carrinho para caixa modular dexter pro"}, "90391070": {"s": "04-Ferramentas", "d": "*maq corte plasma cpv40 vonder"}, "90651533": {"s": "04-Ferramentas", "d": "*caixa plastica injetada 17 tram"}, "90749232": {"s": "04-Ferramentas", "d": "*mascara face shield mod light displays"}, "91006034": {"s": "04-Ferramentas", "d": "*inversora solda lhn 162i  110/220v"}, "91080920": {"s": "04-Ferramentas", "d": "*cortador infinity p/ g format cortag"}, "91711872": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 43"}, "91719663": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 37"}, "91719670": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 38"}, "91719684": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 39"}, "91719691": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 40"}, "91719705": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 41"}, "91719712": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 42"}, "91801682": {"s": "04-Ferramentas", "d": "*curvador tubo 8x10mm dexter"}, "91905695": {"s": "04-Ferramentas", "d": "*kit ferr banc 110pç crv c/maleta vonder"}, "92108331": {"s": "04-Ferramentas", "d": "*maq solda invers awt mma-120ep mono 127"}, "92108345": {"s": "04-Ferramentas", "d": "*maq solda invers awt mma-120ep mono 220"}, "92191022": {"s": "04-Ferramentas", "d": "*maq. solda awt invers. mig-220pro"}, "92198190": {"s": "04-Ferramentas", "d": "*kit ferr banc 110pç aço c/maleta nove54"}, "92200514": {"s": "04-Ferramentas", "d": "*kit ferr banc 141pç aço c/maleta mp"}, "92203482": {"s": "04-Ferramentas", "d": "*marreta 500 g c/ cabo fsc"}, "92203524": {"s": "04-Ferramentas", "d": "*cabo de martelo madeirite 35cm fsc"}, "92203944": {"s": "04-Ferramentas", "d": "*marreta 1 kg c/ cabo fsc"}, "92203951": {"s": "04-Ferramentas", "d": "*marreta 1,5 kg c/ cabo fsc"}, "92203972": {"s": "04-Ferramentas", "d": "*martelo aço polido 29mm cb mad naval fs"}, "92204000": {"s": "04-Ferramentas", "d": "*martelo prof tamboreado n.20 fsc"}, "92204014": {"s": "04-Ferramentas", "d": "*martelo prof tamboreado n.23 fsc"}, "92204021": {"s": "04-Ferramentas", "d": "*martelo prof tamboreado n.25 fsc"}, "92215683": {"s": "04-Ferramentas", "d": "*bot elast bid bq/plast flex 44"}, "92278452": {"s": "04-Ferramentas", "d": "*jg de ferramentas 85 pc robust"}, "92432655": {"s": "04-Ferramentas", "d": "Paraf/furad imp 1/2\"20v/1bate119aces"}, "92457673": {"s": "04-Ferramentas", "d": "Jogo ferr 94pç c/ maleta dexter"}, "92494024": {"s": "04-Ferramentas", "d": "Paraf/furad imp 1/2\"20v/1bate119aces"}, "92496922": {"s": "04-Ferramentas", "d": "*kit ferr banc 110pç crv c/maleta wap"}, "91700441": {"s": "06-Cerâmica", "d": "PISO ES BR BLD IN61,5X61,5 MONTRL M2 AR"}, "91869792": {"s": "06-Cerâmica", "d": "PORC ES PO RT IN 62x121 CALACATA M2"}, "91874006": {"s": "06-Cerâmica", "d": "PORC ES AC RT EX 80X80 LUNAR GREY M2"}, "92031114": {"s": "06-Cerâmica", "d": "PORC PO RT IN71X71 P71251 M O ORO M2ART"}, "92250081": {"s": "06-Cerâmica", "d": "PORC RET EXT ST 120X120 OASI ROCCIA M2"}, "92250221": {"s": "06-Cerâmica", "d": "PORC POL RET INT 90X90 STRATUM GRISEO M"}, "92280874": {"s": "06-Cerâmica", "d": "*PISO ES AC RET 86X86 RT86081 M2"}, "92309105": {"s": "06-Cerâmica", "d": "PORC POL RET INT 90X90 CHARLESTON M2"}, "92343496": {"s": "06-Cerâmica", "d": "PISO AC BO RT IN 81X81 CLEA GREY M2"}, "92413076": {"s": "06-Cerâmica", "d": "PORC AC RT EXT 80X80 HANGAR CHICAGO M²"}, "92413090": {"s": "06-Cerâmica", "d": "PORC ACT RT INT 80X80 HANGAR TORONTO M²"}, "92493380": {"s": "06-Cerâmica", "d": "PISO EX ACAPULCO SIL GRA1,97RT 81X81 M2"}, "89185124": {"s": "07-Sanitários", "d": "*saboneteira metal/vidro cr quartzo fani"}, "89185271": {"s": "07-Sanitários", "d": "*port toal rosto 35,5cm metal cr quartzo"}, "89224310": {"s": "07-Sanitários", "d": "Box front comum 8mm inc 100x190 kit br"}, "89224324": {"s": "07-Sanitários", "d": "Box front comum 8mm inc 110x190 kit br"}, "89224331": {"s": "07-Sanitários", "d": "Box front comum 8mm inc 120x190 kit br"}, "89224380": {"s": "07-Sanitários", "d": "Box front comum 8mm inc 100x190 kit crf"}, "89224590": {"s": "07-Sanitários", "d": "Box front comum 8mm fum 100x190 kit pt"}, "89224604": {"s": "07-Sanitários", "d": "Box front comum 8mm fum 110x190 kit pt"}, "89557314": {"s": "07-Sanitários", "d": "*porta sab rose gold quartzo/prima fani"}, "89557321": {"s": "07-Sanitários", "d": "*papeleira rose gold quartzo/prima fani"}, "89557335": {"s": "07-Sanitários", "d": "*pap c/tpa rsgold quartzo/prima fani"}, "89557342": {"s": "07-Sanitários", "d": "*porttoal 60cm rsgold quartzo/prima"}, "89557356": {"s": "07-Sanitários", "d": "*porttoal 30cm rsgold quartzo/prima fani"}, "89557363": {"s": "07-Sanitários", "d": "*porttoal 46,9cm rs gold quartzo/prima"}, "89557370": {"s": "07-Sanitários", "d": "*cabide quartzo rose gold/prima"}, "89557384": {"s": "07-Sanitários", "d": "*portsham quartzo rosegold/prima"}, "89557391": {"s": "07-Sanitários", "d": "*porttoal dp quartzo rose gold/prima"}, "89557573": {"s": "07-Sanitários", "d": "*porta sabonete quartzo gold/prima fani"}, "89557580": {"s": "07-Sanitários", "d": "*papeleira quartzo gold/prima fani"}, "89557594": {"s": "07-Sanitários", "d": "*papeleira c/tampa gold/prima fani"}, "89557601": {"s": "07-Sanitários", "d": "*port toalha 60cm quartzo gold/prima fan"}, "89557615": {"s": "07-Sanitários", "d": "*porta toalha 30cm quartzo gold/prima"}, "89557622": {"s": "07-Sanitários", "d": "*porttoal 45cm quartzo gold/prima fani"}, "89557636": {"s": "07-Sanitários", "d": "*cabide quartzo gold/prima fani"}, "89557643": {"s": "07-Sanitários", "d": "*porta shampo quartzo gold/prima fani"}, "89557650": {"s": "07-Sanitários", "d": "*porta toalha dp quartzo gold/prima fani"}, "89704825": {"s": "07-Sanitários", "d": "*box abrir camarao 8mm inc 90x185 kit cr"}, "89704846": {"s": "07-Sanitários", "d": "Box abrir camarao 8mm inc 95x185 kit cr"}, "89704860": {"s": "07-Sanitários", "d": "Box abrir camarao 8mm inc 100x185 kit cr"}, "89704895": {"s": "07-Sanitários", "d": "Box abrir camarao 8mm inc 105x185 kit cr"}, "89704923": {"s": "07-Sanitários", "d": "Box abrir camarao 8mm inc 110x185 kit cr"}, "89745243": {"s": "07-Sanitários", "d": "*port toal banho 45cmmet quartzo/primapt"}, "89770506": {"s": "07-Sanitários", "d": "Toalheiro term 127v br 36x56 fio d flape"}, "89770513": {"s": "07-Sanitários", "d": "Toalheiro term 127v cr 36x56 fio d flape"}, "89770520": {"s": "07-Sanitários", "d": "Toalheiro term 127v br 78x56 fio d flape"}, "89770534": {"s": "07-Sanitários", "d": "Toalheiro term 127v cr 78x56 fio d flape"}, "89841864": {"s": "07-Sanitários", "d": "Toalheiro term 220v br 36x56 fio d flape"}, "89841885": {"s": "07-Sanitários", "d": "Toalheiro term 220v cr 36x56 fio d flape"}, "89841906": {"s": "07-Sanitários", "d": "Toalheiro term 220v br 78x56 fio d flape"}, "89841913": {"s": "07-Sanitários", "d": "Toalheiro term 220v cr 78x56 fio d flape"}, "89941635": {"s": "07-Sanitários", "d": "*port toa banh dp met quartzo/prim ptbri"}, "89941642": {"s": "07-Sanitários", "d": "*porta shampo metal quartzo/prima ptbri"}, "89941663": {"s": "07-Sanitários", "d": "*cabide metal quartzo/prima ptbrilho"}, "89941670": {"s": "07-Sanitários", "d": "*pta toal ban 51met quartzo/prima ptbril"}, "89941684": {"s": "07-Sanitários", "d": "*port toal ros 35met quartzo/prima ptbri"}, "89941691": {"s": "07-Sanitários", "d": "*port toal ban 67met quartzo/prima ptbri"}, "89941705": {"s": "07-Sanitários", "d": "*porta papel met quartzo/prima pt brilho"}, "89941712": {"s": "07-Sanitários", "d": "*port pap s/cob met quartzo/prima ptbril"}, "89941726": {"s": "07-Sanitários", "d": "*saboneteira met quartzo/prima ptbril"}, "90038501": {"s": "07-Sanitários", "d": "Toalheiro term 127v br 36x56 fio e flape"}, "90092695": {"s": "07-Sanitários", "d": "*porta papel hig metal cr quartzo fani"}, "90092730": {"s": "07-Sanitários", "d": "*cabide simples metal quartzo fani"}, "90092744": {"s": "07-Sanitários", "d": "*porta shampo metal/vidro quartzo cr fan"}, "90377742": {"s": "07-Sanitários", "d": "Espelho led tracks 70x50cm vbcristais"}, "90401143": {"s": "07-Sanitários", "d": "*espe iron l55xa64 cm dr venturi"}, "90738452": {"s": "07-Sanitários", "d": "Toalheiro term 127v pf 36x56 fio d flape"}, "90738466": {"s": "07-Sanitários", "d": "Toalheiro term 127v pf 78x56 fio d flape"}, "90738473": {"s": "07-Sanitários", "d": "Toalheiro term 220v pf 36x56 fio d flape"}, "90738480": {"s": "07-Sanitários", "d": "Toalheiro term 220v pf 78x56 fio d flape"}, "90774404": {"s": "07-Sanitários", "d": "Espelho led gota 100x75cm vbcristais"}, "91012383": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 110x190 kit br"}, "91012390": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 120x190 kit br"}, "91012404": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 130x190 kit br"}, "91012411": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 140x190 kit br"}, "91015792": {"s": "07-Sanitários", "d": "Box p/ducha flex 8mm inc 70x190 kit pt"}, "91015806": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 100x190 kit br"}, "91036743": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 100x190 kit pt"}, "91036750": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 110x190 kit pt"}, "91036764": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 120x190 kit pt"}, "91036771": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 130x190 kit pt"}, "91036785": {"s": "07-Sanitários", "d": "Box front comum 6mm inc 140x190 kit pt"}, "91036792": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 100x200 kit br"}, "91036813": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 120x200 kit br"}, "91036855": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 100x200 kit cr"}, "91036862": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 110x200 kit cr"}, "91036876": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 120x200 kit cr"}, "91036883": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 130x200 kit cr"}, "91036911": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 100x200 kit pt"}, "91036925": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 110x200 kit pt"}, "91036932": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 120x200 kit pt"}, "91037436": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 130x200 kit pt"}, "91037443": {"s": "07-Sanitários", "d": "Box front duosafe 6mm inc 140x200 kit pt"}, "91080374": {"s": "07-Sanitários", "d": "Box abrir camarao 8mm inc 100x185 kit pt"}, "91080395": {"s": "07-Sanitários", "d": "Box abrir camarao 8mm inc 110x185 kit pt"}, "91843556": {"s": "07-Sanitários", "d": "*porta toalha banho ronda black"}, "91843563": {"s": "07-Sanitários", "d": "*porta toalha rosto ronda black"}, "91843570": {"s": "07-Sanitários", "d": "*porta papel higiênico ronda black"}, "91843584": {"s": "07-Sanitários", "d": "*cabide ronda black"}, "91843591": {"s": "07-Sanitários", "d": "*saboneteira ronda black"}, "91843605": {"s": "07-Sanitários", "d": "*porta toalha banho ronda blush"}, "91843612": {"s": "07-Sanitários", "d": "*porta toalha rosto ronda blush"}, "91843626": {"s": "07-Sanitários", "d": "*porta papel higiênico ronda blush"}, "91843633": {"s": "07-Sanitários", "d": "*cabide ronda blush"}, "91843640": {"s": "07-Sanitários", "d": "*saboneteira ronda blush"}, "91939323": {"s": "07-Sanitários", "d": "Espelho led fabi pto 96x56 agardi"}, "91948605": {"s": "07-Sanitários", "d": "Espelho led com moldura serena pto 40x40"}, "91948612": {"s": "07-Sanitários", "d": "Espelho led com moldura serena bra 40x40"}, "91948626": {"s": "07-Sanitários", "d": "*espelho led com moldura serena dou 40x4"}, "91948633": {"s": "07-Sanitários", "d": "*espelho led com moldura serena pto 40x6"}, "91948640": {"s": "07-Sanitários", "d": "*espelho led com moldura serena bra 40x6"}, "91948654": {"s": "07-Sanitários", "d": "*espelho led com moldura serena dou 40x6"}, "91948661": {"s": "07-Sanitários", "d": "Espelho led com moldura serena pto 60x60"}, "91948675": {"s": "07-Sanitários", "d": "*espelho led com moldura serena bra 60x6"}, "91948682": {"s": "07-Sanitários", "d": "*espelho led com moldura serena dou 60x6"}, "91956781": {"s": "07-Sanitários", "d": "Espelho led couro 60cm cobre 18/36w dna"}, "91956795": {"s": "07-Sanitários", "d": "Espelho led couro 60cm preto 18/36w dna"}, "91956802": {"s": "07-Sanitários", "d": "Espelho led couro 80cm preto 27/54w dna"}, "91956816": {"s": "07-Sanitários", "d": "Espelho led couro 80cm cobre 27/54w dna"}, "91956823": {"s": "07-Sanitários", "d": "Espelho led couro 80cm marrom 27/54w dna"}, "91956830": {"s": "07-Sanitários", "d": "Espelho led couro 100cm cobre 38/76w dna"}, "91956844": {"s": "07-Sanitários", "d": "Espelho led couro 100cm preto 38/76w dna"}, "91956956": {"s": "07-Sanitários", "d": "Espelho led 80cm camellia 36/72w dna"}, "92101954": {"s": "07-Sanitários", "d": "Monoc lav ba mes level pf-deca"}, "92101975": {"s": "07-Sanitários", "d": "Monoc lav bm mes level pf-deca"}, "92233351": {"s": "07-Sanitários", "d": "*gabinete democratic branco venturi"}, "92251152": {"s": "07-Sanitários", "d": "*espelho led c/moldura couro preto 80 vb"}, "92251166": {"s": "07-Sanitários", "d": "Espelho led c/moldura couro preto 60 vb"}, "92251180": {"s": "07-Sanitários", "d": "Espelho led c/moldura couro carame 60 vb"}, "92251201": {"s": "07-Sanitários", "d": "Espelho red led c/moldura couro pt 60 vb"}, "92304926": {"s": "07-Sanitários", "d": "Monoc lav ba mes neo cb-sensea"}, "92304933": {"s": "07-Sanitários", "d": "Monoc lav ba mes neo pf-sensea"}, "92304940": {"s": "07-Sanitários", "d": "Monoc lav bb mes neo pf-sensea"}, "92304961": {"s": "07-Sanitários", "d": "Monoc lav bb mes neo cb-sensea"}, "92380204": {"s": "07-Sanitários", "d": "Gabinete júlia 80 rip semiencaixe cinza"}, "92380211": {"s": "07-Sanitários", "d": "Gabinete júlia 80 rip semiencaixe mad"}, "92399265": {"s": "07-Sanitários", "d": "Bancada vidro clara 80 branca c/led 6mm"}, "92402051": {"s": "07-Sanitários", "d": "Gabinete isa 66cm branco astral"}, "92420195": {"s": "07-Sanitários", "d": "Monoc lav ba mes hao pf-sensea"}, "92420202": {"s": "07-Sanitários", "d": "Monoc lav bb mes hao cr-sensea"}, "92420216": {"s": "07-Sanitários", "d": "Monoc lav bb mes hao pf-sensea"}, "92432081": {"s": "07-Sanitários", "d": "Gab c/cuba emb lateral 60cm mila mad"}, "92432095": {"s": "07-Sanitários", "d": "Gab c/cuba emb lateral 60cm mila branco"}, "92432102": {"s": "07-Sanitários", "d": "Kit bancada porc c/cuba emb 40cm ana br"}, "92432116": {"s": "07-Sanitários", "d": "Kit bancada porc c/cuba emb 40cm ana cz"}, "92457260": {"s": "07-Sanitários", "d": "Kit bancada porc c/cuba emb 40cm ana mad"}, "92486604": {"s": "07-Sanitários", "d": "Kit gab ariana  63cm madeirado astral"}, "92503012": {"s": "07-Sanitários", "d": "Kit gab mavie 60 madeirado agardi"}, "92503026": {"s": "07-Sanitários", "d": "Kit gab mavie 60 branco agardi"}, "86868565": {"s": "09-Jardim", "d": "*avs- sabre 30cm p/ ms 210"}, "87839626": {"s": "09-Jardim", "d": "*cabeçote de corte trimcut c 32-2"}, "87839640": {"s": "09-Jardim", "d": "*carretel fio nylon autocut 25 2,4mm 8m"}, "87839731": {"s": "09-Jardim", "d": "*implemento roçadeira 4fcs 230-km gas"}, "87839752": {"s": "09-Jardim", "d": "*implemento cult solo bf p/motor km stih"}, "87839773": {"s": "09-Jardim", "d": "*carretel fio nylon c5-2 2mm 10m"}, "87839780": {"s": "09-Jardim", "d": "*lâmina para roçadeira 2 facas"}, "87839794": {"s": "09-Jardim", "d": "*lâmina roçadeira 3 facas"}, "87839836": {"s": "09-Jardim", "d": "*roçadeira fs38 gas 0,8hp"}, "87839892": {"s": "09-Jardim", "d": "*roçadeira fse60 600w 127v"}, "87839934": {"s": "09-Jardim", "d": "*roçadeira fse60 600w 220v"}, "87839941": {"s": "09-Jardim", "d": "*aparador cerca viva hs45 gas 1hp"}, "87839990": {"s": "09-Jardim", "d": "*sabre 30cm 1,1mm p/ ht75/ms170"}, "87840004": {"s": "09-Jardim", "d": "*sabre 30cm 1,3mm p/ ms170/180/210/250"}, "87840011": {"s": "09-Jardim", "d": "*sabre 35cm 1,3mm p/ ms210/250"}, "87840025": {"s": "09-Jardim", "d": "*soprador gas bg86ce 1,09hp"}, "87840102": {"s": "09-Jardim", "d": "*ms 210 3/8\"p p motosserra,30cm/12\"63pmc"}, "87840116": {"s": "09-Jardim", "d": "*ms 210 3/8\"p p motosserra,35cm/14\"63pmc"}, "87944346": {"s": "09-Jardim", "d": "*aparador cerca viva hse61 500w 127v"}, "87948035": {"s": "09-Jardim", "d": "*aparador grama fse41 400w 127v"}, "87948056": {"s": "09-Jardim", "d": "*soprador elet bge 71 1000w 127 v"}, "87948070": {"s": "09-Jardim", "d": "*aparador grama fse41 400w 220v"}, "87948084": {"s": "09-Jardim", "d": "*aparador cerca viva hse61 500w 220v"}, "88094622": {"s": "09-Jardim", "d": "* implemento aparador canto gas fcb-km"}, "88094636": {"s": "09-Jardim", "d": "*jogo dispositivo aspiracao bg-86"}, "88094986": {"s": "09-Jardim", "d": "*dispositivo de succao bge 71"}, "88095070": {"s": "09-Jardim", "d": "*implemento soprador axial bg km"}, "88322920": {"s": "09-Jardim", "d": "*ms 250 3/8\"p p motosserra,40cm/16\"63pmc"}, "88329822": {"s": "09-Jardim", "d": "*lavad alta pressao re143 2175 lbs 220v"}, "88361784": {"s": "09-Jardim", "d": "*carregador de bateria al300 127v"}, "88361791": {"s": "09-Jardim", "d": "*carregador de bateria al300 220v"}, "88361805": {"s": "09-Jardim", "d": "*cortador grama rma-370 bateria 36v"}, "88361826": {"s": "09-Jardim", "d": "*aparad cer viva bateria hsa65 s/bat 36v"}, "88361854": {"s": "09-Jardim", "d": "*roçadeira fs55r gas 1hp"}, "88361861": {"s": "09-Jardim", "d": "*serra circular para roçadeira fs85"}, "89263405": {"s": "09-Jardim", "d": "*misturador de combustível 1l"}, "89335372": {"s": "09-Jardim", "d": "*lavad alta pres re 109 1740lbs 220v"}, "89354566": {"s": "09-Jardim", "d": "*ms 230 3/8\"\"p spur motosserra,35cm/14\""}, "89354580": {"s": "09-Jardim", "d": "*motosserra elet ms 170c 30cm 127v"}, "89354594": {"s": "09-Jardim", "d": "*motosserra elet ms 170c 30cm 220v"}, "89354776": {"s": "09-Jardim", "d": "*jogo de afiação 1/4\", 3/8\""}, "89354944": {"s": "09-Jardim", "d": "*tampa para compartimento bateria"}, "89360243": {"s": "09-Jardim", "d": "*sabre motosserra s 50cm"}, "89360250": {"s": "09-Jardim", "d": "*corrente 36 rm 50 cm"}, "89360320": {"s": "09-Jardim", "d": "*corrente 71 pm3 35 cm"}, "89360453": {"s": "09-Jardim", "d": "*implemento aparad cantos km85r gas 1,3h"}, "89389083": {"s": "09-Jardim", "d": "*motosserra gas ms170 30cm 1,8hp 2t"}, "89568122": {"s": "09-Jardim", "d": "*podador de arbustos a bateria hsa 25"}, "89568136": {"s": "09-Jardim", "d": "*implemento fs-km gsb 230-4"}, "89608141": {"s": "09-Jardim", "d": "*implemento podador hl 135º gas"}, "89608925": {"s": "09-Jardim", "d": "*desentupidor de tubulaæo 15m stihl"}, "89608946": {"s": "09-Jardim", "d": "*mangueira de alta pressão 6,9m stihl"}, "89608960": {"s": "09-Jardim", "d": "*lança angular 47cm stihl"}, "89608974": {"s": "09-Jardim", "d": "*aplicador de detergente stihl"}, "89608981": {"s": "09-Jardim", "d": "*extensão da lança stihl"}, "89608995": {"s": "09-Jardim", "d": "*mangueira de alta pressão 6,7m stihl"}, "89628924": {"s": "09-Jardim", "d": "*soprador elétrico bge 71 1000w 220v"}, "89655944": {"s": "09-Jardim", "d": "*kit de sucção bge-71 stihl"}, "89702753": {"s": "09-Jardim", "d": "*cortador grama rma 510 bateria"}, "89702774": {"s": "09-Jardim", "d": "*roçadeira fsa 56 autocut bateria 127v"}, "89702781": {"s": "09-Jardim", "d": "*roçadeira fsa 56 autocut bateria 220v"}, "89702816": {"s": "09-Jardim", "d": "*bateria ak 10 36v"}, "89702844": {"s": "09-Jardim", "d": "*ak 20 bateria"}, "89702872": {"s": "09-Jardim", "d": "*carregador bateria al 101 127v"}, "89702886": {"s": "09-Jardim", "d": "*carregador bateria al 101 220v"}, "89703033": {"s": "09-Jardim", "d": "*cala de jardinagem laranja tam.gg"}, "89703040": {"s": "09-Jardim", "d": "*aparad cerca viva hsa 56 bateria 127v"}, "89703054": {"s": "09-Jardim", "d": "*aparad cerca viva hsa 56 bateria 220v"}, "89703075": {"s": "09-Jardim", "d": "*motosserra msa 120 c-bq bateria 220v"}, "89703082": {"s": "09-Jardim", "d": "*aparad cerca viva hse 52 460w 127v"}, "89703096": {"s": "09-Jardim", "d": "*aparad cerca viva hse 52 460w 220v"}, "89703103": {"s": "09-Jardim", "d": "*soprador bga 56 bateria 127v"}, "89703124": {"s": "09-Jardim", "d": "*soprador bg 50 gasolina"}, "89750850": {"s": "09-Jardim", "d": "*roçadeira fs85 3 facas gas 1,3hp"}, "89750871": {"s": "09-Jardim", "d": "*roçadeira fs80 3 facas gas 1,3hp"}, "89750885": {"s": "09-Jardim", "d": "*roçadeira fs80 2 facas gas 1,3hp"}, "89787726": {"s": "09-Jardim", "d": "*roçadeira fs55 gas 1hp"}, "89836740": {"s": "09-Jardim", "d": "*roçadeira fs120 3 facas gas 1,8hp"}, "89836754": {"s": "09-Jardim", "d": "*roçadeira fs120 gas 1,8hp."}, "89836761": {"s": "09-Jardim", "d": "*roçadeira fsa 45 a bateria"}, "89836775": {"s": "09-Jardim", "d": "*podador hsa 45 a bateria"}, "89836782": {"s": "09-Jardim", "d": "*lamina p/cort grama rma370"}, "89836796": {"s": "09-Jardim", "d": "*lamina p/ cort grama rma510"}, "89836803": {"s": "09-Jardim", "d": "*capacete florestal c/abafador cinza"}, "89836810": {"s": "09-Jardim", "d": "*soprador bga 45 a bateria"}, "89899033": {"s": "09-Jardim", "d": "*fio de nylon 1,4mm 16m trs"}, "89899040": {"s": "09-Jardim", "d": "*fio de nylon 1,4mm 20m az"}, "89899082": {"s": "09-Jardim", "d": "*fio de nylon 2mm 123m vd"}, "89899096": {"s": "09-Jardim", "d": "*fio de nylon 2,4mm 15,3m lrj"}, "89899131": {"s": "09-Jardim", "d": "*motosserra mse 141 c-q eletr 127v"}, "89899145": {"s": "09-Jardim", "d": "*motosserra mse 141 c-q eletr 220v"}, "89957042": {"s": "09-Jardim", "d": "*filtro para agua de reuso stihl"}, "89957084": {"s": "09-Jardim", "d": "*lavad alta pres re232 220v"}, "90083294": {"s": "09-Jardim", "d": "Mesa aço flora origami 70x70 bg naterial"}, "90144733": {"s": "09-Jardim", "d": "*vaso res cone riscato 38x55cm terrac"}, "90220382": {"s": "09-Jardim", "d": "*lavadora de alta pressão re90 127v"}, "90220396": {"s": "09-Jardim", "d": "*lavadora de alta pressão re90 220v"}, "90220410": {"s": "09-Jardim", "d": "*lavadora de alta pressão re95  220v"}, "90280071": {"s": "09-Jardim", "d": "*roçadeira fs 131 a combustao"}, "90311991": {"s": "09-Jardim", "d": "Escada p pisc degrau removível 52' 132cm"}, "90431432": {"s": "09-Jardim", "d": "*soprador gas bg86ce 1,09hp"}, "90542571": {"s": "09-Jardim", "d": "*pulverizador manual sg31"}, "90542585": {"s": "09-Jardim", "d": "*pulverizador manual costal sg71"}, "90542592": {"s": "09-Jardim", "d": "*pulverizador manual costal sg20"}, "90560435": {"s": "09-Jardim", "d": "Poltrona al/mad oris cz esc naterial"}, "90602855": {"s": "09-Jardim", "d": "*cobertura alu ysis taupe 3x3m naterial"}, "90602876": {"s": "09-Jardim", "d": "*cortina alu ysis cort taupe 3x3m nat"}, "90660654": {"s": "09-Jardim", "d": "Conjunto aço kangfu 6 peças bege"}, "90724025": {"s": "09-Jardim", "d": "*cadeira solaris"}, "90725306": {"s": "09-Jardim", "d": "Valvula seletora 6 funcoes topo veico 1½"}, "90735134": {"s": "09-Jardim", "d": "*tecido p/ omb sonora 290x290 br nateria"}, "90775370": {"s": "09-Jardim", "d": "*cobertura p churras 70x70 naterial"}, "90859153": {"s": "09-Jardim", "d": "*podador gta26set bateria 127v stihl"}, "90859160": {"s": "09-Jardim", "d": "*podador gta26set bateria 220v stihl"}, "91002520": {"s": "09-Jardim", "d": "*kit deck 3,5m2 atlas naterial plastico"}, "91043890": {"s": "09-Jardim", "d": "*mesa jantar alu odyssea ii 100x240cm bc"}, "91043904": {"s": "09-Jardim", "d": "*mesa jantar alu odyssea ii 100x240cm mr"}, "91043911": {"s": "09-Jardim", "d": "*mesa jantar alu odyssea ii 100x320cm cz"}, "91043932": {"s": "09-Jardim", "d": "*mesa ext alu odyssea ii 100x240cm bc"}, "91050141": {"s": "09-Jardim", "d": "*luva de proteção premium pp"}, "91050155": {"s": "09-Jardim", "d": "*luva de proteção premium p"}, "91050162": {"s": "09-Jardim", "d": "*luva de proteção premium m"}, "91050176": {"s": "09-Jardim", "d": "*luva de proteção premium g"}, "91058016": {"s": "09-Jardim", "d": "*banqueta mad yumi c/persi 0,72m nat"}, "91058142": {"s": "09-Jardim", "d": "*kit limpeza de piscina 3 pç naterial"}, "91096460": {"s": "09-Jardim", "d": "*v.flora plás.alto27 33x32 pt már nateri"}, "91853965": {"s": "09-Jardim", "d": "*vaso circular eco bali 58x80cm jeans"}, "91868630": {"s": "09-Jardim", "d": "*capa p balanço prisma 203x274 cinza nat"}, "91871612": {"s": "09-Jardim", "d": "*pergolado alu odyssea 319x380 cinza nat"}, "91941241": {"s": "09-Jardim", "d": "Cercado ocult vime 1x3m marrom nat"}, "91942802": {"s": "09-Jardim", "d": "*lavadora ap re80 127v stihl"}, "91942816": {"s": "09-Jardim", "d": "*lavadora ap re80 220v stihl"}, "91942823": {"s": "09-Jardim", "d": "*lavadora ap re90 plus 127v stihl"}, "91942830": {"s": "09-Jardim", "d": "*lavadora ap re90 plus 220v stihl"}, "91977312": {"s": "09-Jardim", "d": "*corrente pm 3,8 1,3mm 35cm p ms210/250"}, "91977326": {"s": "09-Jardim", "d": "*corrente 36 rm 50 cm"}, "91977396": {"s": "09-Jardim", "d": "*motosserra gas ms210 35cm 2,2hp 2t"}, "91977403": {"s": "09-Jardim", "d": "*motosserra gas ms230 35cm 2,7hp 2t"}, "91977410": {"s": "09-Jardim", "d": "*motosserra gas  ms250 40cm 3,1hp 2t"}, "91977424": {"s": "09-Jardim", "d": "*motosserra gas  ms310 50cm 4,4hp 2t"}, "91990206": {"s": "09-Jardim", "d": "Mesa aço flora ii origami 70x70 az nat"}, "91990213": {"s": "09-Jardim", "d": "Mesa aço flora ii origami 70x70 lrj nat"}, "91990325": {"s": "09-Jardim", "d": "*cadeira alu odyssea cz nat"}, "91990500": {"s": "09-Jardim", "d": "*conj sofa alu odyssea 4l cz/branco nat"}, "92074360": {"s": "09-Jardim", "d": "Banco de 3 lugares yumi naterial"}, "92074395": {"s": "09-Jardim", "d": "Mesa redonda yumi naterial"}, "92074416": {"s": "09-Jardim", "d": "*colchão espreguiçadeira yumi naterial"}, "92074430": {"s": "09-Jardim", "d": "*mesa auxiliar 55x55 yumi naterial"}, "92074465": {"s": "09-Jardim", "d": "Sofá 3 lugares yumi naterial"}, "92074493": {"s": "09-Jardim", "d": "*sofá módulo esquerdo yumi naterial"}, "92074521": {"s": "09-Jardim", "d": "Mesa auxiliar 80x80 yumi naterial"}, "92080044": {"s": "09-Jardim", "d": "*gazebo oxia alu/aço 4x3x4 na/cl nt"}, "92080114": {"s": "09-Jardim", "d": "*mesa lagos 280x106x75alu fsc bco/natu n"}, "92080121": {"s": "09-Jardim", "d": "*mesa bermeo 210x100x78 alu fsc nate"}, "92080135": {"s": "09-Jardim", "d": "*mesa bermeo 4p 130x75x107alu fsc natu n"}, "92080142": {"s": "09-Jardim", "d": "*mesa baixa griffin 5p alu fsc bege nate"}, "92080156": {"s": "09-Jardim", "d": "*cj mesa bx baelo 4p fsc teca mad natura"}, "92080163": {"s": "09-Jardim", "d": "*mesa quadra. 5p alu fsc natural nateria"}, "92080170": {"s": "09-Jardim", "d": "*mesa surrey 5p alu fsc naterial"}, "92080275": {"s": "09-Jardim", "d": "*cj mesa canto memphis 4p alu fsc bco nt"}, "92080303": {"s": "09-Jardim", "d": "*cj sofa 3p canto surrey 5palu fsc bco n"}, "92080310": {"s": "09-Jardim", "d": "*cj sofa 2p canto surrey 5palu fsc bco n"}, "92080324": {"s": "09-Jardim", "d": "*cj sofa 2p esquerdo memphis4p alu bco n"}, "92080331": {"s": "09-Jardim", "d": "*cj sofa 2p direito memphis 4p alu bca n"}, "92080352": {"s": "09-Jardim", "d": "*cj banco/mesa calisto 4p alu fsc bege n"}, "92080366": {"s": "09-Jardim", "d": "*sofa 3p canto griffin 5palu fsc beige n"}, "92080380": {"s": "09-Jardim", "d": "*cj sofa 1p calisto 4p alu fsc beige nt"}, "92080394": {"s": "09-Jardim", "d": "*cj sofá 2p calisto 4p alu fsc beige nt"}, "92080401": {"s": "09-Jardim", "d": "*cj sofa 2p baelo 4p fsc cz/natu nateria"}, "92080415": {"s": "09-Jardim", "d": "*poltrona baelo 4p fsc teca cz/natu nate"}, "92080520": {"s": "09-Jardim", "d": "*banco alto bermeo alu fsc natural nt"}, "92080541": {"s": "09-Jardim", "d": "*poltrona ribeira fsc teca 57x55x84 nate"}, "92080555": {"s": "09-Jardim", "d": "*cadeira ribeira fsc teca 47x55x84 nate"}, "92081955": {"s": "09-Jardim", "d": "*vaso vietnamita 70 preto absoluto"}, "92082312": {"s": "09-Jardim", "d": "Mesa cento athena 130x68,5 bco naterial"}, "92082340": {"s": "09-Jardim", "d": "Mesa apoio athena alu branco naterial"}, "92082424": {"s": "09-Jardim", "d": "Cj 2 poltronas athena alu bco nate"}, "92082522": {"s": "09-Jardim", "d": "*sofa esq 2p athena corner alu bco nater"}, "92082543": {"s": "09-Jardim", "d": "Sofa 2p athena alu bco naterial"}, "92082746": {"s": "09-Jardim", "d": "*mesa apoio athena alu bco nt"}, "92082753": {"s": "09-Jardim", "d": "*modulo athena alu bco naterial"}, "92082802": {"s": "09-Jardim", "d": "Espreguicadeira athena alu bco naterial"}, "92082942": {"s": "09-Jardim", "d": "*sofa direito 2p athena corner alu bco n"}, "92083026": {"s": "09-Jardim", "d": "Sofa 3p athena alu bco naterial"}, "92083040": {"s": "09-Jardim", "d": "Poltrona athena alu bco naterial"}, "92083054": {"s": "09-Jardim", "d": "*modulo canto athena alu bco naterial"}, "92083075": {"s": "09-Jardim", "d": "*modulo meio athena 1p alu bco naterial"}, "92127686": {"s": "09-Jardim", "d": "*churrasqueira parrilla preta"}, "92185562": {"s": "09-Jardim", "d": "*vaso bola 2 beje mescla 40x44x32"}, "92201935": {"s": "09-Jardim", "d": "*cj de canto odyssea 7p alu bco nate"}, "92202033": {"s": "09-Jardim", "d": "*mesa baixa lita 140x70x35 fsc teca nate"}, "92202110": {"s": "09-Jardim", "d": "*mesa baixa neptune 91,5x91,5x44 alu nat"}, "92202152": {"s": "09-Jardim", "d": "*mesa neptune 6p 200x100 branca nate"}, "92202236": {"s": "09-Jardim", "d": "*cobertura neptune alu 213x173x200 nate"}, "92202250": {"s": "09-Jardim", "d": "*poltrona neptune alu bco/cza naterial"}, "92202292": {"s": "09-Jardim", "d": "*módulo canto únic neptune alu/acri nate"}, "92202355": {"s": "09-Jardim", "d": "*módulo único neptune 1p alu/acrili nate"}, "92202404": {"s": "09-Jardim", "d": "*modulo de canto athena alu cza esc nate"}, "92207192": {"s": "09-Jardim", "d": "*capa de proteção espreguiçadeira yumi"}, "92232812": {"s": "09-Jardim", "d": "*podador a bateria hsa 50.0 set, 127v"}, "92232840": {"s": "09-Jardim", "d": "*motocultivador mh 610.0 (br)"}, "92232861": {"s": "09-Jardim", "d": "*lavadora de alta-pressão re 145 127 v"}, "92232875": {"s": "09-Jardim", "d": "*lavadora de alta-pressão re 145 220 v"}, "92232882": {"s": "09-Jardim", "d": "*bomba de água wp 900.0"}, "92232896": {"s": "09-Jardim", "d": "*podador de arbustos bate hsa 26set 127v"}, "92232903": {"s": "09-Jardim", "d": "*podador de arbustos bate hsa 26set 220v"}, "92232910": {"s": "09-Jardim", "d": "*motosserra bate msa 60.0c-b 1/4pset 220"}, "92232924": {"s": "09-Jardim", "d": "*motosserra bate msa 60.0 cb 1/4pset 127"}, "92232952": {"s": "09-Jardim", "d": "*sabre r 40cm/16\" 1,3mm/0.050\"3/8\"p ms25"}, "92232966": {"s": "09-Jardim", "d": "*sabre s 40cm/16\" 1,6mm/0.063\" 3/8\" ms31"}, "92232973": {"s": "09-Jardim", "d": "*corrente 36 rm rapid micro - ms310"}, "92232980": {"s": "09-Jardim", "d": "*sabre r 35cm/14\" 1,1mm/0.043\" - ms180c"}, "92232994": {"s": "09-Jardim", "d": "*corrente 61 pmm3 picco micro mini ms180"}, "92233001": {"s": "09-Jardim", "d": "*corrente 63 pm picco micro corrent ms25"}, "92233022": {"s": "09-Jardim", "d": "*bateria ak 20"}, "92233036": {"s": "09-Jardim", "d": "*podador elétrico hse 52, 127v, 500mm/20"}, "92233043": {"s": "09-Jardim", "d": "*podador elétrico hse 52, 220v, 500mm/20"}, "92233050": {"s": "09-Jardim", "d": "*carregador rápido de bat al 301, 127 v"}, "92233064": {"s": "09-Jardim", "d": "*carregador rápido de bat al 301, 220 v"}, "92261715": {"s": "09-Jardim", "d": "Carrinho jardim mad solarium euca nat"}, "92261722": {"s": "09-Jardim", "d": "Espreguiçadeira solarium eucalipto nat"}, "92275106": {"s": "09-Jardim", "d": "Robo limpador automatico cosmy 200"}, "92276681": {"s": "09-Jardim", "d": "*vaso atenas cilindrico 44 chumbo"}, "92278144": {"s": "09-Jardim", "d": "Grama sintétic 30mm 1x5 abrol sporty nat"}, "92278200": {"s": "09-Jardim", "d": "Grama sintétic 30mm 2x5 abrol sporty nat"}, "92283303": {"s": "09-Jardim", "d": "Cadeira s brac alu lyra beta bc 2x2 nat"}, "92324456": {"s": "09-Jardim", "d": "*mangueira kit jardim tranç verde 15m"}, "92324463": {"s": "09-Jardim", "d": "*mangueira kit jardim tranç verde 20m"}, "92324470": {"s": "09-Jardim", "d": "*mangueira kit jardim tranç verde 30m"}, "92324484": {"s": "09-Jardim", "d": "*mangueira kit jardim lisa verde 15m"}, "92324680": {"s": "09-Jardim", "d": "*ms 172 motosserra,35cm/14\",61pmm3"}, "92324694": {"s": "09-Jardim", "d": "*ms 172 c-be motosserra,35cm/14\",61pmm3"}, "92324701": {"s": "09-Jardim", "d": "*ms 182 motosserra,40cm/16\",63pm3"}, "92324715": {"s": "09-Jardim", "d": "*ms 212 motosserra,45cm/18\",63pm3"}, "92324722": {"s": "09-Jardim", "d": "*ms 162 motosserra,61pmm3"}, "92324736": {"s": "09-Jardim", "d": "*fs 55 roçadeira,autocut c 26-2"}, "92324750": {"s": "09-Jardim", "d": "*hs 45 podador,450mm/18\""}, "92324764": {"s": "09-Jardim", "d": "*hsa 50.1 set podador a bateria, 220v,"}, "92324771": {"s": "09-Jardim", "d": "*hsa 50.1 set podador a bateria, 127v,"}, "92324785": {"s": "09-Jardim", "d": "*fsa 57 set roçadeir bateria autocut 220"}, "92324792": {"s": "09-Jardim", "d": "*fsa 57 set roçadeir bateria autocut 127"}, "92324834": {"s": "09-Jardim", "d": "*fsa 30.0 set roçadeira a bateria 127v"}, "92324841": {"s": "09-Jardim", "d": "*fsa 30.0 set roçadeira a bateria 220v"}, "92324862": {"s": "09-Jardim", "d": "*hsa 40.0 set podador a bateria, 220v,"}, "92324876": {"s": "09-Jardim", "d": "*hsa 40.0 set podador a bateria, 127v,"}, "92324904": {"s": "09-Jardim", "d": "*fs 38 roçadeira,autocut c6-2"}, "92325555": {"s": "09-Jardim", "d": "Corrimão paraty"}, "92328054": {"s": "09-Jardim", "d": "Deck varanda 15x122cm com base injetada"}, "92334781": {"s": "09-Jardim", "d": "Conj:faca 8+chaira+garfo trinchante nat"}, "92361710": {"s": "09-Jardim", "d": "Vaso liso conico 53 cimento queimado"}, "92361731": {"s": "09-Jardim", "d": "Vaso liso conico 53 macchiato"}, "92361745": {"s": "09-Jardim", "d": "Vaso liso redondo 33 preto ardosia"}, "92380134": {"s": "09-Jardim", "d": "*mangueira kit jardim tranç verde 10m"}, "92401225": {"s": "09-Jardim", "d": "Mini deck 30x30 ripa 4 eucalipto natural"}, "92404746": {"s": "09-Jardim", "d": "Poltrona  alumí champ manu aqua 67x70x86"}, "92404753": {"s": "09-Jardim", "d": "Sofá 2 alumí champ manu aquap 127x70x86"}, "92404760": {"s": "09-Jardim", "d": "Mesa ctr alumí champ manu aquap 60x45x45"}, "92443624": {"s": "09-Jardim", "d": "*vaso cer espanhol 70x47cm perola"}, "87134250": {"s": "10-Ferragens", "d": "Espelho de Segurança 23cm Alumínio 601 Vision"}, "87134313": {"s": "10-Ferragens", "d": "Espelho de Segurança 30cm Alumínio 602 Vision"}, "87134362": {"s": "10-Ferragens", "d": "Espelho de Segurança 40cm Alumínio 603 Vision"}, "87134404": {"s": "10-Ferragens", "d": "Espelho de Segurança 60cm Alumínio 605 Vision"}, "88041926": {"s": "10-Ferragens", "d": "Caixa de Correio para Muro Alumínio Dourado 15x35x36cm"}, "89459111": {"s": "10-Ferragens", "d": "Espelho de Segurança Retangular 40x25cm Borracha 1201 Vision"}, "91715540": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Cobre Cobre 128mm"}, "92007692": {"s": "10-Ferragens", "d": "Carrinho de Carga Dobrável Degraus 70kg Standers"}, "92305430": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 40mm 3 Peças Let Ago Inox"}, "92305444": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 40mm 3 Peças Let Ago Inox"}, "92305451": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 40mm 3 Peças Let Ago Inox"}, "92305486": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 250mm 2 Peças Cubbo Ago Inox"}, "92305493": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 60mm 3 Peças Ylly Ago Inox"}, "92305500": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 60mm 3 Peças Ylly Ago Inox"}, "92305514": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 60mm 1 Peça Ylly Ago Inox"}, "92305521": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 110mm 3 Peças Zetta Ago Inox"}, "92305535": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 110mm 3 Peças Zetta Ago Inox"}, "92305542": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 110mm 3 Peças Zetta Ago Inox"}, "92305556": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 140mm 1 Peça Onda Ago Inox"}, "92305563": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 140mm 3 Peças Onda Ago Inox"}, "92305570": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 140mm 3 Peças Onda Ago Inox"}, "92305584": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 125mm 3 Peças Hiti Ago Inox"}, "92305591": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 125mm 3 Peças Hiti Ago Inox"}, "92305605": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 125mm 3 Peças Hiti Ago Inox"}, "92305612": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 115mm 3 Peças Lynus Ago Inox"}, "92305626": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 115mm 3 Peças Lynus Ago Inox"}, "92305633": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 115mm 3 Peças Lynus Ago Inox"}, "92305640": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Rosa 840mm 1 Peça Luna Ago Inox"}, "92305654": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Amarelo 840mm 3 Peças Luna Ago Inox"}, "92305661": {"s": "10-Ferragens", "d": "Puxador para Móveis Zamac Azul 840mm 3 Peças Luna Ago Inox"}, "92492106": {"s": "10-Ferragens", "d": "FECHADURA BIOMÉT INTELIG WIFI - SHFB700"}, "89082336": {"s": "11-Pintura", "d": "BASE P ACRÍLICO SEDA CORAL 0,81 L"}, "89082343": {"s": "11-Pintura", "d": "BASE T ACRILICO SEDA CORAL 0,8 L"}, "89082371": {"s": "11-Pintura", "d": "BASE P ACRILICO SEDA CORAL 3,24 L"}, "89082385": {"s": "11-Pintura", "d": "BASE T ACRILICO SEDA CORAL 3,24 L"}, "89082413": {"s": "11-Pintura", "d": "BASE P ACRILICO SEDA CORAL 16,2 L"}, "89082420": {"s": "11-Pintura", "d": "BASE T ACRILICO SEDA CORAL 16,2 L"}, "89372703": {"s": "11-Pintura", "d": "Base p acril fo decora 0,8l"}, "89372710": {"s": "11-Pintura", "d": "Base p acril fo decora 3,2l"}, "89372724": {"s": "11-Pintura", "d": "Base p acril fo decora 16l"}, "89372780": {"s": "11-Pintura", "d": "Base t acril fo decora 3,2l"}, "89372794": {"s": "11-Pintura", "d": "Base t acril fo decora 0,8l"}, "89372801": {"s": "11-Pintura", "d": "Base t acril fo decora 16l"}, "89594323": {"s": "11-Pintura", "d": "Base p super lavavel 16,2l"}, "89594330": {"s": "11-Pintura", "d": "Base p super lavavel 3,2l"}, "89594344": {"s": "11-Pintura", "d": "Base p super lavavel 0,8l"}, "89594351": {"s": "11-Pintura", "d": "Base mf super lavavel 16,2l"}, "89594386": {"s": "11-Pintura", "d": "Base mf super lavavel 3,2l"}, "89594393": {"s": "11-Pintura", "d": "Base t super lavavel 3,2l"}, "89594400": {"s": "11-Pintura", "d": "Base mf super lavavel 0,8l"}, "89594414": {"s": "11-Pintura", "d": "Base t super lavavel 0,8l"}, "89594421": {"s": "11-Pintura", "d": "Base t super lavavel 16,2l"}, "90263516": {"s": "11-Pintura", "d": "Tinta stand fo bra 20l rend/cobr suvinil"}, "90658162": {"s": "11-Pintura", "d": "Massa corrida 25kg suvinil balde"}, "90658176": {"s": "11-Pintura", "d": "Massa acrilica 25kg suvinil"}, "91934871": {"s": "11-Pintura", "d": "*tinta acril stan rend mto pérola 16l"}, "91935060": {"s": "11-Pintura", "d": "*tinta acril stan rend mto sino 16l"}, "91935081": {"s": "11-Pintura", "d": "*tinta acril stan rend mto cromo suv 16l"}, "92258775": {"s": "11-Pintura", "d": "*tinta pre int/ext f compl n int 18l suv"}, "92258796": {"s": "11-Pintura", "d": "*tinta pre int/ext f compl rio pa 18l su"}, "92258915": {"s": "11-Pintura", "d": "*tinta std int/ext fos rcm n inte 18l su"}, "92259083": {"s": "11-Pintura", "d": "*tinta pre int/ext f compl allure 18l su"}, "92259202": {"s": "11-Pintura", "d": "*tinta pre it/et t brilho elefan 18l suv"}, "92259223": {"s": "11-Pintura", "d": "*tinta pre fachada p branca 18l suv"}, "92259412": {"s": "11-Pintura", "d": "Base toque f compl a2 16l suvinil"}, "92259426": {"s": "11-Pintura", "d": "Base toque f compl a2 3,2l suvinil"}, "92259433": {"s": "11-Pintura", "d": "Base toque f compl a2 0,8l suvinil"}, "92259503": {"s": "11-Pintura", "d": "Base sempre limpo a2 16l suvinil"}, "92259510": {"s": "11-Pintura", "d": "Base sempre limpo a2 3,2l suvinil"}, "92259524": {"s": "11-Pintura", "d": "Base sempre limpo a2 0,8l suvinil"}, "92259531": {"s": "11-Pintura", "d": "Base sempre limpo b2 16l suvinil"}, "92259545": {"s": "11-Pintura", "d": "Base sempre limpo b2 3,2l suvinil"}, "92259552": {"s": "11-Pintura", "d": "Base sempre limpo b2 0,8l suvinil"}, "92259566": {"s": "11-Pintura", "d": "Base sempre limpo c2 16l suvinil"}, "92259573": {"s": "11-Pintura", "d": "Base sempre limpo c2 3,2l suvinil"}, "92259580": {"s": "11-Pintura", "d": "Base sempre limpo c2 0,8l suvinil"}, "92259594": {"s": "11-Pintura", "d": "Base toque seda a2 16l suvinil"}, "92259601": {"s": "11-Pintura", "d": "Base toque seda a2 3,2l suvinil"}, "92259615": {"s": "11-Pintura", "d": "Base toque seda a2 0,8l suvinil"}, "92315111": {"s": "11-Pintura", "d": "*tinta prem master int fos palha 18lcora"}, "92335502": {"s": "11-Pintura", "d": "Massa corrida 25kg suvinil balde"}, "92427034": {"s": "11-Pintura", "d": "DECORA MATTE EXTRA FOSCO BASE MF16L"}, "92427041": {"s": "11-Pintura", "d": "DECORA MATTE EXTRA FOSCO BASE MF 3.2L"}, "92427055": {"s": "11-Pintura", "d": "DECORA MATTE EXTRA FOSCO BASE MF 800ML"}, "92427125": {"s": "11-Pintura", "d": "CR DECORA SEDA AC BASE MF 0.8L"}, "92427132": {"s": "11-Pintura", "d": "CR DECORA SEDA AC BASE MF 16L"}, "92427146": {"s": "11-Pintura", "d": "CR DECORA SEDA AC BASE MF 3.2L"}, "90229251": {"s": "12-Decoração", "d": "*tap pe 140x200 melody mf"}, "90229265": {"s": "12-Decoração", "d": "*tap pe 47x90 melody mf"}, "90229272": {"s": "12-Decoração", "d": "*tap pe 35x65 melody mf"}, "90229293": {"s": "12-Decoração", "d": "*tap pe 140x200 melody rs"}, "90229300": {"s": "12-Decoração", "d": "*tap pe 47x90 melody rs"}, "90229314": {"s": "12-Decoração", "d": "*tap pe 35x65 melody rs"}, "90229321": {"s": "12-Decoração", "d": "*tap pe 100x140 melody bg"}, "90229342": {"s": "12-Decoração", "d": "*tap pe 100x140 melody cz"}, "90229356": {"s": "12-Decoração", "d": "*tap pe 140x200 melody bg"}, "90229370": {"s": "12-Decoração", "d": "*tap pe 140x200 melody cz"}, "90229384": {"s": "12-Decoração", "d": "*tap pe 47x90 melody bg"}, "90229412": {"s": "12-Decoração", "d": "*tap pe 35x65 melody bg"}, "90229433": {"s": "12-Decoração", "d": "*tap pe 35x65 melody cz"}, "90708142": {"s": "12-Decoração", "d": "*tap 47x90 melody formato cz"}, "90708163": {"s": "12-Decoração", "d": "*tap 47x90 melody formato mf"}, "91061425": {"s": "12-Decoração", "d": "*tap 140 diam melody cz"}, "91075201": {"s": "12-Decoração", "d": "*tap 47x90 melody formato bg"}, "92036420": {"s": "12-Decoração", "d": "*GRAVURAS PAPEL 50X70 MATISSE PT"}, "92036490": {"s": "12-Decoração", "d": "*GRAVURAS 50X70 MATISSE CORPOS"}, "92036525": {"s": "12-Decoração", "d": "*GRAVURAS 50X70 MATISSE MULHER PT"}, "92140685": {"s": "12-Decoração", "d": "ESPELHO NORD PRATELEIRA MAD 56CM INSPIR"}, "92168916": {"s": "12-Decoração", "d": "PORTA RETRATO 13X18 INDUSTRIAL WAL INSP"}, "92216740": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 180X220 cm Bg"}, "92216873": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 120X160 cm Br"}, "92216894": {"s": "12-Decoração", "d": "Persiana Filtering Visio 140x160 cm Br"}, "92216971": {"s": "12-Decoração", "d": "Persiana Filtering Visio 120x160 cm Br"}, "92216992": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 200X220 cm Bg"}, "92217013": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual200x220 cm Cz"}, "92217090": {"s": "12-Decoração", "d": "Persiana Filtering Visio 120x160 cm Cz"}, "92217125": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 140X160 cm Br"}, "92217153": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 140X160 cm Bg"}, "92217174": {"s": "12-Decoração", "d": "Persiana Filtering Visio 160x160 cm Br"}, "92217195": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 160X160 cm Cz"}, "92217321": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 160X160 cm Br"}, "92217370": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 160x220 cm Bg"}, "92217426": {"s": "12-Decoração", "d": "Persiana Filtering Visio 140x160 cm Cz"}, "92217454": {"s": "12-Decoração", "d": "Persiana DoubleVision Dual 120X160 cm Bg"}, "92218665": {"s": "12-Decoração", "d": "Persiana Filtering Visio 160x160 cm Cz"}, "92222641": {"s": "12-Decoração", "d": "*ESP INFANTIL MOLD DECOR PETELAS RATTAN"}, "92244341": {"s": "12-Decoração", "d": "*papel parede dan beg 053x10.5 inspire"}, "92298892": {"s": "12-Decoração", "d": "PAPEL PAREDE 0,53 X 10M TNT - PALHA"}, "92335285": {"s": "12-Decoração", "d": "*revest adesivo contact 45cmx2m amarelo"}, "92357055": {"s": "12-Decoração", "d": "*tapete 50 x 90 cm vip palha"}, "92357062": {"s": "12-Decoração", "d": "*tapete 100x140 cm vip palha"}, "92357076": {"s": "12-Decoração", "d": "*tapete 140x200 cm vip palha"}, "92357090": {"s": "12-Decoração", "d": "*tapete vip 150x150 cm palha"}, "92357104": {"s": "12-Decoração", "d": "*tapete vip 200x250 cm palha"}, "92357146": {"s": "12-Decoração", "d": "*tapete vip 100x140 cm fendi"}, "92357153": {"s": "12-Decoração", "d": "*tapete vip 140x200 cm fendi"}, "92357174": {"s": "12-Decoração", "d": "*tapete vip 150x150 cm fendi"}, "92357181": {"s": "12-Decoração", "d": "*tapete vip 200x250 cm fendi"}, "92357244": {"s": "12-Decoração", "d": "*tapete vip 66x180 cm caqui"}, "92357251": {"s": "12-Decoração", "d": "*tapete vip 150x150 cm caqui"}, "92357293": {"s": "12-Decoração", "d": "*tapetes vip 50x90 cm rose"}, "92357300": {"s": "12-Decoração", "d": "*tapete vip 100x140 cm rose"}, "92357335": {"s": "12-Decoração", "d": "*tapete vip 150x150 cm rose"}, "92357356": {"s": "12-Decoração", "d": "*tapete vip 50x120 cm rose"}, "92467235": {"s": "12-Decoração", "d": "*papel de parede tnt luxe verde 50x10m"}, "92467242": {"s": "12-Decoração", "d": "*papel de parede tnt luxe bege 50x10m"}, "92467263": {"s": "12-Decoração", "d": "*papel de parede tnt luxe vinho 50x10m"}, "89398106": {"s": "13-Iluminação", "d": "*pend first 1l e27 vidro bronzearte"}, "89691000": {"s": "13-Iluminação", "d": "*spot emb led red 3w am inspire"}, "89691014": {"s": "13-Iluminação", "d": "*spot emb led quad 3w am inspire"}, "89691021": {"s": "13-Iluminação", "d": "*spot emb led red 3w br inspire"}, "89691042": {"s": "13-Iluminação", "d": "*spot emb led quad 3w br inspire"}, "89691070": {"s": "13-Iluminação", "d": "*spot emb led red 5w l.br inspire"}, "89691084": {"s": "13-Iluminação", "d": "*spot emb led quad 5w l.br inspire"}, "90436192": {"s": "13-Iluminação", "d": "*pend e27 vidro cobre 1l first bronzeart"}, "90436206": {"s": "13-Iluminação", "d": "*pend e27 vidro crom 1l first bronzearte"}, "90436213": {"s": "13-Iluminação", "d": "*pend e27 vidro cobre 2l first bronzeart"}, "90436220": {"s": "13-Iluminação", "d": "*pend e27 vidro crom 2l first bronzearte"}, "90436234": {"s": "13-Iluminação", "d": "*pend e27 vidro cobre 3l first bronzeart"}, "90436241": {"s": "13-Iluminação", "d": "*pend e27 vidro crom 3l first bronzearte"}, "91037156": {"s": "13-Iluminação", "d": "*kit 4 x spot emb led quad 3w l br inspi"}, "91037240": {"s": "13-Iluminação", "d": "*spot emb led red 3w l nt inspire"}, "91037254": {"s": "13-Iluminação", "d": "*spot emb led quad 3w l nt inspire"}, "91064505": {"s": "13-Iluminação", "d": "*pend first 2l e27 vidro bronzearte"}, "91071295": {"s": "13-Iluminação", "d": "*painel led sob red 5w l.am inspire"}, "91071302": {"s": "13-Iluminação", "d": "*painel led sob red 5w l.br inspire"}, "91071330": {"s": "13-Iluminação", "d": "*painel led sob red 15w l.am inspire"}, "91071344": {"s": "13-Iluminação", "d": "*painel led sob red 15w l.br inspire"}, "91071351": {"s": "13-Iluminação", "d": "*painel led sob red 20w l.am inspire"}, "91071365": {"s": "13-Iluminação", "d": "*painel led sob red 20w l.br inspire"}, "91071533": {"s": "13-Iluminação", "d": "*painel led sob quad 15w l.am inspire"}, "91071540": {"s": "13-Iluminação", "d": "*painel led sob quad 15w l.br inspire"}, "91071554": {"s": "13-Iluminação", "d": "*painel led sob quad 20w l.am inspire"}, "91071561": {"s": "13-Iluminação", "d": "*painel led sob quad 20w l.br inspire"}, "91071610": {"s": "13-Iluminação", "d": "*painel led emb red 15w l.am inspire"}, "91071624": {"s": "13-Iluminação", "d": "*painel led emb red 15w l.br inspire"}, "91071631": {"s": "13-Iluminação", "d": "*painel led emb red 20w l.am inspire"}, "91071645": {"s": "13-Iluminação", "d": "*painel led emb red 20w l.br inspire"}, "91071694": {"s": "13-Iluminação", "d": "*painel led emb quad 15w l.am inspire"}, "91071701": {"s": "13-Iluminação", "d": "*painel led emb quad 15w l.br inspire"}, "91071715": {"s": "13-Iluminação", "d": "*painel led emb quad 20w l.am inspire"}, "91071736": {"s": "13-Iluminação", "d": "*painel led emb quad 20w l.br inspire"}, "91811713": {"s": "13-Iluminação", "d": "*PLAFON LED ALUM QUAD CASE 2 PT L.AM"}, "91915082": {"s": "13-Iluminação", "d": "*PEND SPACE COUNTOUR PTO 50WL.AM 54X100C"}, "91915173": {"s": "13-Iluminação", "d": "*PEND SPAC COUNT PLUS DOU50WL.AM 60X100C"}, "91915180": {"s": "13-Iluminação", "d": "*PEND SPAC COUNT PLUS PTO50WL.AM 60X100C"}, "91920024": {"s": "13-Iluminação", "d": "*ARAND EFEITO MINI BOLL 8W PTL.AM"}, "92020145": {"s": "13-Iluminação", "d": "*PEND OVAL RATTAN E27 30CM OIKOS"}, "92056293": {"s": "13-Iluminação", "d": "*pendente cosmos br 3 aros led 113w gmh"}, "92056300": {"s": "13-Iluminação", "d": "Pend cosmos 5 halos 40cm branco gmh"}, "92083691": {"s": "13-Iluminação", "d": "*LUM LED 15 SPOTS EMB 30W AM PT DOT LIGH"}, "92328502": {"s": "13-Iluminação", "d": "*PENDENTE SITIO 1XE27 D38CM PTO INSPIRE"}, "92328523": {"s": "13-Iluminação", "d": "*ARANDELA SITIO 1XE27 D28CM PTO INSPIRE"}, "92328530": {"s": "13-Iluminação", "d": "*PLAFON SITIO 1XE27 D38CM PTO INSPIRE"}, "92328544": {"s": "13-Iluminação", "d": "*PENDENTE CARMID 2XE27 D80CM PTO INSPIRE"}, "92352015": {"s": "13-Iluminação", "d": "*pendente cosmos sil 3 aros led 113w gmh"}, "92352022": {"s": "13-Iluminação", "d": "Pend cosmos 5 halos 40cm silver gmh"}, "92411200": {"s": "13-Iluminação", "d": "*PENDENTE SPACE RAIL 30W 3CCT PT BI"}, "92411214": {"s": "13-Iluminação", "d": "*PENDENTE SPACE RAIL 30W 3CCT GD BI"}, "92411221": {"s": "13-Iluminação", "d": "*PENDENTE LED PTO INFINITY 32W 3CCT"}, "89566533": {"s": "15-Cozinhas", "d": "Purificador S/Refrig Exclusivo Br Consul"}, "89566540": {"s": "15-Cozinhas", "d": "Purificador S/Refrig Exclusivo Cz Consul"}, "89820773": {"s": "15-Cozinhas", "d": "Purif Refrig Pla CPB 34 Biv Br Consul"}, "91071925": {"s": "15-Cozinhas", "d": "*Forno Emb Gas 220v 78L Brastemp"}, "91710444": {"s": "15-Cozinhas", "d": "Purificador Refrig PE12G bivolt Grafite"}, "91710451": {"s": "15-Cozinhas", "d": "Purificador Refrig PE12B Bivolt Br"}, "91824726": {"s": "15-Cozinhas", "d": "Microondas Branco 32L 127v Brastemp"}, "91824733": {"s": "15-Cozinhas", "d": "Microondas Branco 32L 220v Brastemp"}, "91824740": {"s": "15-Cozinhas", "d": "Microondas Espelhado 32L 127v Brastemp"}, "91824754": {"s": "15-Cozinhas", "d": "Microondas Espelhado 32L 220v Brastemp"}, "91824761": {"s": "15-Cozinhas", "d": "Microondas Branco 32L 127v Consul"}, "91824775": {"s": "15-Cozinhas", "d": "Microondas Branco 32L 220v Consul"}, "91946603": {"s": "15-Cozinhas", "d": "Cooktop 4B Inducao Oster 220v"}, "91961464": {"s": "15-Cozinhas", "d": "Microondas Branco 23L 127v Electrolux"}, "91961471": {"s": "15-Cozinhas", "d": "Microondas Branco 23L 220v Electrolux"}, "91961506": {"s": "15-Cozinhas", "d": "Microondas inox 23l 127v electrolux"}, "91961513": {"s": "15-Cozinhas", "d": "Microondas Inox 23L 220v Electrolux"}, "91961520": {"s": "15-Cozinhas", "d": "Microondas Inox 36L 127v Electrolux"}, "91961534": {"s": "15-Cozinhas", "d": "Microondas Inox 36L 220v Electrolux"}, "91978810": {"s": "15-Cozinhas", "d": "Lava loucas compacta 8 servicos br 127v"}, "91978824": {"s": "15-Cozinhas", "d": "Lava Loucas Compacta 8 Servicos Br 220v"}, "91980630": {"s": "15-Cozinhas", "d": "Lava loucas compacta 8 servico inox 127"}, "91980644": {"s": "15-Cozinhas", "d": "Lava Loucas Compacta 8 Servico Inox 220v"}, "92051673": {"s": "15-Cozinhas", "d": "Microondas midea prata 20l 110v"}, "92051680": {"s": "15-Cozinhas", "d": "Microondas Midea Prata 20L 220v"}, "92081052": {"s": "15-Cozinhas", "d": "Lava loucas midea 14 servicos br 127v"}, "92081066": {"s": "15-Cozinhas", "d": "Lava Loucas Midea 14 Servicos Br 220v"}, "92081073": {"s": "15-Cozinhas", "d": "Lava loucas midea 14 servicos pr 127v"}, "92081080": {"s": "15-Cozinhas", "d": "Lava Loucas Midea 14 Servicos Pr 220v"}, "92085210": {"s": "15-Cozinhas", "d": "*Adega 29 garrafas 127v WDF29 Electrolux"}, "92085224": {"s": "15-Cozinhas", "d": "*Adega 29 garrafas 220v WDF29 Electrolux"}, "92085231": {"s": "15-Cozinhas", "d": "Adega 34 garrafas 127v WSF34 Electrolux"}, "92085245": {"s": "15-Cozinhas", "d": "*Adega 34 garrafas 220v WSF34 Electrolux"}, "92166144": {"s": "15-Cozinhas", "d": "Pote Transparente Empilhável 1L Delinia"}, "92166263": {"s": "15-Cozinhas", "d": "Fruteira de Acacia 15,5x17,5x13 Delinia"}, "92166326": {"s": "15-Cozinhas", "d": "Bandeja Giratória de 2 Níveis Delinia"}, "92166340": {"s": "15-Cozinhas", "d": "Suporte para Garrafas Delinia Sem Tensão Elétrica"}, "92166431": {"s": "15-Cozinhas", "d": "Kit 4 Potes Vidro Transparente com Tampa de Madeira Delinia"}, "92166466": {"s": "15-Cozinhas", "d": "Kit 6 Tampas Expansíveis de Silicone Delinia"}, "92166620": {"s": "15-Cozinhas", "d": "Organizador expans panela e tamp delinia"}, "92275736": {"s": "15-Cozinhas", "d": "Purificador de água pc01x 127v"}, "92275743": {"s": "15-Cozinhas", "d": "Purificador De Água PC01X 220V"}, "92302462": {"s": "15-Cozinhas", "d": "* Frigobar retro 127v classic whit 76l"}, "92302476": {"s": "15-Cozinhas", "d": "*Frigobar retro 127v marsala wine 76l"}, "92302560": {"s": "15-Cozinhas", "d": "*Frigobar retro 127v midnight blu 76l"}, "92312801": {"s": "15-Cozinhas", "d": "Gancho de Porta Aço 6,34x53cm Branco Delinia"}, "92313921": {"s": "15-Cozinhas", "d": "*Frigobar Consul 45L Br 127V"}, "92313935": {"s": "15-Cozinhas", "d": "*Frigobar Consul 45L Br 220V"}, "92313942": {"s": "15-Cozinhas", "d": "*Frigobar Consul 45L Pt 127V"}, "92313956": {"s": "15-Cozinhas", "d": "*Frigobar Consul 45L Pt 220V"}, "92316322": {"s": "15-Cozinhas", "d": "Organizador de Geladeira Transparente 10x17,4x32,1cm Delinia"}, "92316336": {"s": "15-Cozinhas", "d": "Tapete Antiderrapante para Gaveta de Borracha 150x50cm Cinza Escuro Delinia"}, "92351175": {"s": "15-Cozinhas", "d": "Cooktop 4B indução Brast c Funções Esp"}, "92354731": {"s": "15-Cozinhas", "d": "Cooktop indu built in freezone 2b 220v"}, "92369046": {"s": "15-Cozinhas", "d": "Cooktop Fischer 4Q FIT LINE Gás PTO"}, "92376564": {"s": "15-Cozinhas", "d": "Forno de Emb elétrico Consul 47L 220v"}, "92376571": {"s": "15-Cozinhas", "d": "Forno de Emb elétrico Consul 47L 110v"}, "92376585": {"s": "15-Cozinhas", "d": "Forno de Emb elétrico Consul 84L 220v"}, "92376592": {"s": "15-Cozinhas", "d": "Forno de Emb elétrico Consul 84L 110v"}, "92376606": {"s": "15-Cozinhas", "d": "Forno de Emb a gás Consul 78L COA84CE"}, "92391243": {"s": "15-Cozinhas", "d": "Lava-louça inox ls14e 110v"}, "92391250": {"s": "15-Cozinhas", "d": "Lava-Louça Inox LS14E 220v"}, "92415120": {"s": "15-Cozinhas", "d": "Micro-ondas new vbl branco 20l 127v"}, "92415134": {"s": "15-Cozinhas", "d": "Micro-ondas new vbl branco 20l 220v"}, "92422414": {"s": "15-Cozinhas", "d": "Purificador de agua slimpure br bivolt"}, "92422421": {"s": "15-Cozinhas", "d": "Purificador de agua slimpure cz bivolt"}, "92422435": {"s": "15-Cozinhas", "d": "ADEGA PRETA 12G BIV"}, "92422442": {"s": "15-Cozinhas", "d": "Cervejeira frost free preta 82l 127v"}, "92430954": {"s": "15-Cozinhas", "d": "Forno embut elétrico 80l experience 220v"}, "92431892": {"s": "15-Cozinhas", "d": "Cooktop gas mesa preto 4 bocas bdd61 biv"}, "92431906": {"s": "15-Cozinhas", "d": "Cooktop gas mesa preto 5 bocas bdd75 biv"}, "92431920": {"s": "15-Cozinhas", "d": "Cooktop gas mesa preto 5 bds75 biv"}, "92431934": {"s": "15-Cozinhas", "d": "Cooktop consul 4b cd060 biv"}, "92431941": {"s": "15-Cozinhas", "d": "Cooktop consul 5b cd075 biv"}, "92490104": {"s": "15-Cozinhas", "d": "COOKTOP GAS MESA VIDRO PRETO 5B FC"}, "92490251": {"s": "15-Cozinhas", "d": "CERVEJEIRA PTA METALI/VIDRO 82L 127V M"}, "92490265": {"s": "15-Cozinhas", "d": "CERVEJEIRA PTA METALI/VIDRO 82L 220V M"}, "92496376": {"s": "15-Cozinhas", "d": "Cervejeira frost free 82l preta 220v"}, "92500086": {"s": "15-Cozinhas", "d": "Microondas Brastemp 23 Litros Inox 127V"}, "92500093": {"s": "15-Cozinhas", "d": "Microondas Brastemp 23 Litros Inox 220V"}, "92500142": {"s": "15-Cozinhas", "d": "Microondas Consul 23 Litros Inox 127V"}, "92500156": {"s": "15-Cozinhas", "d": "Microondas Consul 23 Litros Inox 220V"}, "92547490": {"s": "15-Cozinhas", "d": "Kit 4 potes plástico Electrolux"}, "92547511": {"s": "15-Cozinhas", "d": "Lixeira New Inox c/Pedal 12l Tramontina"}, "92547525": {"s": "15-Cozinhas", "d": "Lixeira New Inox c/Pedal 20l Tramontina"}, "92547532": {"s": "15-Cozinhas", "d": "Lixeira New Inox c/Pedal 30l Tramontina"}, "92548841": {"s": "15-Cozinhas", "d": "Lixeira New Inox com Pedal 5l Tramontina"}, "88591741": {"s": "11-Pintura", "d": "Text Rust Bca 24Kg JP"}, "89585230": {"s": "15-Cozinhas", "d": "Cooktop 2b gas preto bivolt fischer"}, "91824782": {"s": "15-Cozinhas", "d": "Microondas espelhado 32l 127v consul"}, "91824796": {"s": "15-Cozinhas", "d": "Microondas espelhado 32l 220v consul"}, "91946582": {"s": "15-Cozinhas", "d": "Cooktop 2b inducao 127v oster"}, "91946596": {"s": "15-Cozinhas", "d": "Cooktop 2b inducao oster 220v"}, "91946610": {"s": "15-Cozinhas", "d": "Cooktop 4b gas oster inox"}, "92270745": {"s": "15-Cozinhas", "d": "Forno el fisch fit line emb 48l inx 127v"}, "92270752": {"s": "15-Cozinhas", "d": "Forno el fisch fit line emb 48l inx 220v"}, "92270766": {"s": "15-Cozinhas", "d": "Forno el fisch fit line emb 48l pt 127v"}, "92270773": {"s": "15-Cozinhas", "d": "Forno el fisch fit line emb 48l pt 220v"}, "92302511": {"s": "15-Cozinhas", "d": "*frigobar retro 220v rose quartz 76l"}, "92327396": {"s": "15-Cozinhas", "d": "Lava louças 15serv brastemp smart br 127"}, "92327403": {"s": "15-Cozinhas", "d": "Lava louças 15serv brastemp smart br 220"}, "92327410": {"s": "15-Cozinhas", "d": "Lava louças 15serv brastemp smart pt 127"}, "92327424": {"s": "15-Cozinhas", "d": "Lava louças 15serv brastemp smart pt 220"}, "92395324": {"s": "15-Cozinhas", "d": "Cooktop electrolux 5 bocas ke5xc"}, "92395331": {"s": "15-Cozinhas", "d": "Cooktop electro 5 bocas pro series ke5ps"}, "92400630": {"s": "15-Cozinhas", "d": "Lava-louças brastemp 8 serviços pt 127v"}, "92475530": {"s": "15-Cozinhas", "d": "Triturador de alimentos 550 sr 127v"}, "92475544": {"s": "15-Cozinhas", "d": "Triturador de alimentos 550 sr 220v"}, "92475551": {"s": "15-Cozinhas", "d": "Triturador de alimento 700 sr 127v"}, "92475565": {"s": "15-Cozinhas", "d": "Triturador de alimento 700 sr 220v"}, "92532293": {"s": "15-Cozinhas", "d": "Purificador philco acqua biv branca"}};
 
-    const EMBEDDED_INITIAL_STATE = {"activeTab":"02 - Carpintaria e Madeiras","myStore":"35-Curitiba Atuba","ignoreDoping":false,"storeMsvRealBlack":18.2,"blockData":{"02 - Carpintaria e Madeiras":{"mode":"daily","accumulatedRows":[],"days":{"1":[{"loja":"11-Rio Barra","venda":64020.32,"vendaA1":17538.84,"msv":18.5293,"msvRS":11862.54},{"loja":"12-Morumbi","venda":58009.63,"vendaA1":22063.75,"msv":23.6995,"msvRS":13748},{"loja":"19-Porto Alegre","venda":56030,"vendaA1":23999.39,"msv":20.9676,"msvRS":11748.13},{"loja":"38-Fortaleza","venda":55214.45,"vendaA1":12815.92,"msv":21.8127,"msvRS":12043.75},{"loja":"03-Campinas D. Pedro","venda":51979.61,"vendaA1":28446.14,"msv":13.9737,"msvRS":7263.47},{"loja":"44-Campo Grande","venda":50834.57,"vendaA1":9601.55,"msv":24.308,"msvRS":12356.88},{"loja":"58-Marginal Tietê 2","venda":47147.21,"vendaA1":29077.72,"msv":22.0027,"msvRS":10373.64},{"loja":"22-Anhanguera","venda":46641.88,"vendaA1":24100.59,"msv":16.0792,"msvRS":7499.66},{"loja":"07-Rio Norte","venda":45641.98,"vendaA1":14482.95,"msv":18.9822,"msvRS":8663.84},{"loja":"59-Salvador","venda":43845.21,"vendaA1":8377.99,"msv":20.5947,"msvRS":9029.77},{"loja":"21-Niteroi","venda":42723.21,"vendaA1":6920.51,"msv":18.7789,"msvRS":8022.94},{"loja":"32-São Leopoldo","venda":40777.96,"vendaA1":8401.82,"msv":-1.6071,"msvRS":-655.36},{"loja":"05-Raposo Tavares","venda":38833.16,"vendaA1":22811.91,"msv":19.9586,"msvRS":7750.55},{"loja":"67-Guarulhos","venda":37275.98,"vendaA1":9149.12,"msv":19.6802,"msvRS":7335.99},{"loja":"45-São Bernardo","venda":35716.44,"vendaA1":21243.83,"msv":15.7592,"msvRS":5628.62},{"loja":"46-Tamboré","venda":32275.31,"vendaA1":25658.52,"msv":18.6813,"msvRS":6029.46},{"loja":"15-São José Dos Campos","venda":31263.06,"vendaA1":19236.22,"msv":18.7934,"msvRS":5875.4},{"loja":"09-Curitiba","venda":30601.28,"vendaA1":16728.78,"msv":9.0512,"msvRS":2769.78},{"loja":"27-Sorocaba","venda":28895.09,"vendaA1":24795.99,"msv":-114.8161,"msvRS":-33176.21},{"loja":"35-Curitiba Atuba","venda":28558.05,"vendaA1":7166.24,"msv":12.3243,"msvRS":3519.58},{"loja":"56-Jundiaí","venda":27771.12,"vendaA1":12882.63,"msv":21.3251,"msvRS":5922.23},{"loja":"63-Poa Estaleiro","venda":27696.43,"vendaA1":11660.51,"msv":19.6165,"msvRS":5433.06},{"loja":"36-Bh Norte","venda":25068.63,"vendaA1":11641.54,"msv":21.9693,"msvRS":5507.41},{"loja":"01-Interlagos","venda":23929.33,"vendaA1":16080.95,"msv":3.5617,"msvRS":852.28},{"loja":"57-Vitória","venda":23185.37,"vendaA1":8931.42,"msv":20.5463,"msvRS":4763.74},{"loja":"10-São Caetano","venda":22325.17,"vendaA1":9923.17,"msv":22.6839,"msvRS":5064.23},{"loja":"13-Brasília Sul","venda":21891.03,"vendaA1":14069.55,"msv":23.2892,"msvRS":5098.24},{"loja":"76-Joinville","venda":21210.89,"vendaA1":4911.16,"msv":16.7734,"msvRS":3557.78},{"loja":"24-Lar Center","venda":20933.08,"vendaA1":11705.42,"msv":18.1024,"msvRS":3789.39},{"loja":"50-Maceio","venda":19672.98,"vendaA1":18602.91,"msv":19.4605,"msvRS":3828.46},{"loja":"28-Brasília Norte","venda":19383.58,"vendaA1":5477.36,"msv":8.9197,"msvRS":1728.96},{"loja":"62-Santos","venda":17946.18,"vendaA1":15030.87,"msv":14.6061,"msvRS":2621.23},{"loja":"04-Contagem","venda":17815.39,"vendaA1":15671.92,"msv":18.7697,"msvRS":3343.89},{"loja":"77-Jardim Botânico Df","venda":17147.02,"vendaA1":4499.27,"msv":27.4967,"msvRS":4714.87},{"loja":"78-Bauru","venda":16981.69,"vendaA1":4385.11,"msv":18.7872,"msvRS":3190.38},{"loja":"39-São José","venda":15291.67,"vendaA1":18750.85,"msv":19.5188,"msvRS":2984.75},{"loja":"49-Natal","venda":14649.43,"vendaA1":3628.02,"msv":22.0943,"msvRS":3236.69},{"loja":"42-Jaguaré","venda":13734.37,"vendaA1":9505.12,"msv":26.7093,"msvRS":3668.36},{"loja":"33-Londrina","venda":13570.54,"vendaA1":5357.72,"msv":23.6537,"msvRS":3209.93},{"loja":"18-Goiania","venda":13231.12,"vendaA1":11577.11,"msv":23.0934,"msvRS":3055.52},{"loja":"41-Anália Franco","venda":12251.48,"vendaA1":8093.7,"msv":24.1065,"msvRS":2953.4},{"loja":"55-Taubaté","venda":11544.34,"vendaA1":2862.1,"msv":17.5794,"msvRS":2029.42},{"loja":"34-São José Do Rio Preto","venda":11291.61,"vendaA1":6716.48,"msv":10.2261,"msvRS":1154.69},{"loja":"16-Ricardo Jafet","venda":10862.59,"vendaA1":18652.2,"msv":14.0316,"msvRS":1524.2},{"loja":"20-Bh Sul","venda":8867.8,"vendaA1":5775.84,"msv":22.9797,"msvRS":2037.79},{"loja":"29-Uberlândia","venda":6633.3,"vendaA1":4833.17,"msv":14.983,"msvRS":993.87},{"loja":"02-Ribeirão Preto","venda":1937.82,"vendaA1":15197.99,"msv":-29.4775,"msvRS":-571.22}]}},"04 - Ferramentas":{"mode":"accumulated","accumulatedRows":[],"days":{}}},"expurgosBySection":{"02 - Carpintaria e Madeiras":[],"04 - Ferramentas":[]},"extras":{"04 - Ferramentas":{"me":{"decolagemPts":189,"diarioPts":674,"mdhPct":0,"servPct":0,"servPts":0,"celebreQty":0,"celebrePts":5},"rival":{"decolagemPts":145,"diarioPts":757,"mdhPct":0,"servPct":0,"servPts":0,"celebreQty":0,"celebrePts":3}},"02 - Carpintaria e Madeiras":{"me":{"decolagemPts":170,"diarioPts":660,"mdhPct":75,"servPct":0,"servPts":20,"celebreQty":0,"celebrePts":5},"rival":{"decolagemPts":118,"diarioPts":813,"mdhPct":75,"servPct":0,"servPts":20,"celebreQty":0,"celebrePts":5}}},"savedAt":1795550260450};
+    const EMBEDDED_INITIAL_STATE = {"activeTab":"04 - Ferramentas","myStore":"35-Curitiba Atuba","ignoreDoping":true,"storeMsvRealBlack":18.2,"blockData":{"02 - Carpintaria e Madeiras":{"mode":"daily","accumulatedRows":[],"days":{"1":[{"loja":"11-Rio Barra","venda":64020.32,"vendaA1":53066.37,"msv":18.5293,"msvRS":11862.54},{"loja":"12-Morumbi","venda":58009.63,"vendaA1":65798.56,"msv":23.6995,"msvRS":13748},{"loja":"19-Porto Alegre","venda":56030,"vendaA1":42663.05,"msv":20.9676,"msvRS":11748.13},{"loja":"38-Fortaleza","venda":55214.45,"vendaA1":75266.31,"msv":21.8127,"msvRS":12043.75},{"loja":"03-Campinas D. Pedro","venda":51979.61,"vendaA1":63458.68,"msv":13.9737,"msvRS":7263.47},{"loja":"44-Campo Grande","venda":50834.57,"vendaA1":20207.73,"msv":24.308,"msvRS":12356.88},{"loja":"58-Marginal Tietê 2","venda":47147.21,"vendaA1":76550.9,"msv":22.0027,"msvRS":10373.64},{"loja":"22-Anhanguera","venda":46641.88,"vendaA1":49807.2,"msv":16.0792,"msvRS":7499.66},{"loja":"07-Rio Norte","venda":45641.98,"vendaA1":26001.22,"msv":18.9822,"msvRS":8663.84},{"loja":"59-Salvador","venda":43845.21,"vendaA1":88340.24,"msv":20.5947,"msvRS":9029.77},{"loja":"21-Niteroi","venda":42723.21,"vendaA1":29081.97,"msv":18.7789,"msvRS":8022.94},{"loja":"32-São Leopoldo","venda":40777.96,"vendaA1":44657.83,"msv":-1.6071,"msvRS":-655.36},{"loja":"05-Raposo Tavares","venda":38833.16,"vendaA1":23352.76,"msv":19.9586,"msvRS":7750.55},{"loja":"67-Guarulhos","venda":37275.98,"vendaA1":33410.5,"msv":19.6802,"msvRS":7335.99},{"loja":"45-São Bernardo","venda":35716.44,"vendaA1":40763.57,"msv":15.7592,"msvRS":5628.62},{"loja":"46-Tamboré","venda":32275.31,"vendaA1":14471.38,"msv":18.6813,"msvRS":6029.46},{"loja":"15-São José Dos Campos","venda":31263.06,"vendaA1":29037.79,"msv":18.7934,"msvRS":5875.4},{"loja":"09-Curitiba","venda":30601.28,"vendaA1":22727.82,"msv":9.0512,"msvRS":2769.78},{"loja":"27-Sorocaba","venda":28895.09,"vendaA1":42582.22,"msv":-114.8161,"msvRS":-33176.21},{"loja":"35-Curitiba Atuba","venda":28558.05,"vendaA1":16780.95,"msv":12.3243,"msvRS":3519.58},{"loja":"56-Jundiaí","venda":27771.12,"vendaA1":19610.3,"msv":21.3251,"msvRS":5922.23},{"loja":"63-Poa Estaleiro","venda":27696.43,"vendaA1":33769.82,"msv":19.6165,"msvRS":5433.06},{"loja":"36-Bh Norte","venda":25068.63,"vendaA1":29805.63,"msv":21.9693,"msvRS":5507.41},{"loja":"01-Interlagos","venda":23929.33,"vendaA1":48203.3,"msv":3.5617,"msvRS":852.28},{"loja":"57-Vitória","venda":23185.37,"vendaA1":15475.92,"msv":20.5463,"msvRS":4763.74},{"loja":"10-São Caetano","venda":22325.17,"vendaA1":21233.45,"msv":22.6839,"msvRS":5064.23},{"loja":"13-Brasília Sul","venda":21891.03,"vendaA1":43807.24,"msv":23.2892,"msvRS":5098.24},{"loja":"76-Joinville","venda":21210.89,"vendaA1":4309.24,"msv":16.7734,"msvRS":3557.78},{"loja":"24-Lar Center","venda":20933.08,"vendaA1":46428.14,"msv":18.1024,"msvRS":3789.39},{"loja":"50-Maceio","venda":19672.98,"vendaA1":23324.33,"msv":19.4605,"msvRS":3828.46},{"loja":"28-Brasília Norte","venda":19383.58,"vendaA1":21067.13,"msv":8.9197,"msvRS":1728.96},{"loja":"62-Santos","venda":17946.18,"vendaA1":20066.73,"msv":14.6061,"msvRS":2621.23},{"loja":"04-Contagem","venda":17815.39,"vendaA1":20426.42,"msv":18.7697,"msvRS":3343.89},{"loja":"77-Jardim Botânico Df","venda":17147.02,"vendaA1":7777.37,"msv":27.4967,"msvRS":4714.87},{"loja":"78-Bauru","venda":16981.69,"vendaA1":9211.79,"msv":18.7872,"msvRS":3190.38},{"loja":"39-São José","venda":15291.67,"vendaA1":27317.38,"msv":19.5188,"msvRS":2984.75},{"loja":"49-Natal","venda":14649.43,"vendaA1":28089.35,"msv":22.0943,"msvRS":3236.69},{"loja":"42-Jaguaré","venda":13734.37,"vendaA1":13412.14,"msv":26.7093,"msvRS":3668.36},{"loja":"33-Londrina","venda":13570.54,"vendaA1":11602.54,"msv":23.6537,"msvRS":3209.93},{"loja":"18-Goiania","venda":13231.12,"vendaA1":21984.72,"msv":23.0934,"msvRS":3055.52},{"loja":"41-Anália Franco","venda":12251.48,"vendaA1":24020.73,"msv":24.1065,"msvRS":2953.4},{"loja":"55-Taubaté","venda":11544.34,"vendaA1":27162.99,"msv":17.5794,"msvRS":2029.42},{"loja":"34-São José Do Rio Preto","venda":11291.61,"vendaA1":17626.68,"msv":10.2261,"msvRS":1154.69},{"loja":"16-Ricardo Jafet","venda":10862.59,"vendaA1":26524.99,"msv":14.0316,"msvRS":1524.2},{"loja":"20-Bh Sul","venda":8867.8,"vendaA1":23373.85,"msv":22.9797,"msvRS":2037.79},{"loja":"29-Uberlândia","venda":6633.3,"vendaA1":6885.64,"msv":14.983,"msvRS":993.87},{"loja":"02-Ribeirão Preto","venda":1937.82,"vendaA1":21255.83,"msv":-29.4775,"msvRS":-571.22}],"2":[{"loja":"19-Porto Alegre","venda":75091.39,"vendaA1":52125.32,"msv":20.3653,"msvRS":15292.59},{"loja":"58-Marginal Tietê 2","venda":73078.47,"vendaA1":44894.41,"msv":19.3333,"msvRS":14128.46},{"loja":"11-Rio Barra","venda":65337.61,"vendaA1":71366.37,"msv":17.9021,"msvRS":11696.78},{"loja":"59-Salvador","venda":61376.32,"vendaA1":50646.8,"msv":19.602,"msvRS":12030.96},{"loja":"03-Campinas D. Pedro","venda":60752.83,"vendaA1":22547.77,"msv":18.9305,"msvRS":11500.84},{"loja":"67-Guarulhos","venda":60742.82,"vendaA1":43882.61,"msv":19.9845,"msvRS":12139.13},{"loja":"12-Morumbi","venda":50967.09,"vendaA1":48259,"msv":17.0998,"msvRS":8715.28},{"loja":"15-São José Dos Campos","venda":47456.65,"vendaA1":45324.17,"msv":18.3098,"msvRS":8689.22},{"loja":"38-Fortaleza","venda":45015.09,"vendaA1":92125.22,"msv":14.445,"msvRS":6502.41},{"loja":"04-Contagem","venda":44278.44,"vendaA1":35044.66,"msv":22.2379,"msvRS":9846.59},{"loja":"27-Sorocaba","venda":44010.7,"vendaA1":38665.73,"msv":16.1331,"msvRS":7100.29},{"loja":"07-Rio Norte","venda":43637.83,"vendaA1":25664.11,"msv":17.0453,"msvRS":7438.21},{"loja":"46-Tamboré","venda":43022.07,"vendaA1":22709.49,"msv":18.0633,"msvRS":7771.22},{"loja":"05-Raposo Tavares","venda":40025.75,"vendaA1":48798.49,"msv":19.7897,"msvRS":7920.96},{"loja":"45-São Bernardo","venda":39173.82,"vendaA1":41360.55,"msv":19.2987,"msvRS":7560.03},{"loja":"32-São Leopoldo","venda":36044.57,"vendaA1":53463.95,"msv":18.9096,"msvRS":6815.87},{"loja":"01-Interlagos","venda":35105.45,"vendaA1":36824.96,"msv":24.2078,"msvRS":8498.25},{"loja":"16-Ricardo Jafet","venda":34556.16,"vendaA1":35018.73,"msv":24.634,"msvRS":8512.57},{"loja":"41-Anália Franco","venda":32646.06,"vendaA1":36123.55,"msv":18.3702,"msvRS":5997.15},{"loja":"13-Brasília Sul","venda":32011.78,"vendaA1":62493.8,"msv":20.1127,"msvRS":6438.42},{"loja":"50-Maceio","venda":31679.88,"vendaA1":30238.71,"msv":22.0922,"msvRS":6998.79},{"loja":"63-Poa Estaleiro","venda":30846.19,"vendaA1":33721.69,"msv":21.3886,"msvRS":6597.56},{"loja":"62-Santos","venda":30409.1,"vendaA1":18444.39,"msv":17.7216,"msvRS":5388.98},{"loja":"55-Taubaté","venda":29139.63,"vendaA1":7227.64,"msv":16.324,"msvRS":4756.74},{"loja":"02-Ribeirão Preto","venda":28878.44,"vendaA1":31307.22,"msv":15.5829,"msvRS":4500.1},{"loja":"18-Goiania","venda":27643.38,"vendaA1":18523.38,"msv":18.0721,"msvRS":4995.75},{"loja":"44-Campo Grande","venda":25728.29,"vendaA1":19238.17,"msv":23.498,"msvRS":6045.63},{"loja":"22-Anhanguera","venda":24842.83,"vendaA1":32140.62,"msv":14.5587,"msvRS":3616.8},{"loja":"33-Londrina","venda":24291.66,"vendaA1":5641.39,"msv":11.2272,"msvRS":2727.27},{"loja":"10-São Caetano","venda":23231.39,"vendaA1":25471.22,"msv":21.2875,"msvRS":4945.39},{"loja":"42-Jaguaré","venda":20752.7,"vendaA1":13101.26,"msv":21.5148,"msvRS":4464.91},{"loja":"21-Niteroi","venda":20682.43,"vendaA1":31407.93,"msv":16.5486,"msvRS":3422.65},{"loja":"09-Curitiba","venda":19810.38,"vendaA1":26760.27,"msv":17.7009,"msvRS":3506.61},{"loja":"56-Jundiaí","venda":19508.95,"vendaA1":10810.63,"msv":19.2858,"msvRS":3762.45},{"loja":"24-Lar Center","venda":19501.88,"vendaA1":23637.79,"msv":16.0344,"msvRS":3127},{"loja":"39-São José","venda":18768.37,"vendaA1":45211.57,"msv":18.7225,"msvRS":3513.9},{"loja":"35-Curitiba Atuba","venda":18247.86,"vendaA1":23817.6,"msv":20.0055,"msvRS":3650.58},{"loja":"49-Natal","venda":17236.04,"vendaA1":14118.59,"msv":19.2699,"msvRS":3321.36},{"loja":"28-Brasília Norte","venda":16675.03,"vendaA1":13540.99,"msv":26.3998,"msvRS":4402.17},{"loja":"57-Vitória","venda":14312.85,"vendaA1":19504.91,"msv":20.4671,"msvRS":2929.43},{"loja":"34-São José Do Rio Preto","venda":13567.17,"vendaA1":22572.16,"msv":21.3346,"msvRS":2894.5},{"loja":"36-Bh Norte","venda":13496.04,"vendaA1":25193.86,"msv":20.8738,"msvRS":2817.14},{"loja":"76-Joinville","venda":13078.77,"vendaA1":12174.81,"msv":19.8789,"msvRS":2599.92},{"loja":"29-Uberlândia","venda":11719.34,"vendaA1":9271.87,"msv":21.0002,"msvRS":2461.08},{"loja":"20-Bh Sul","venda":11017.14,"vendaA1":21460.04,"msv":21.3804,"msvRS":2355.51},{"loja":"78-Bauru","venda":7959.31,"vendaA1":10127.55,"msv":13.8239,"msvRS":1100.29},{"loja":"77-Jardim Botânico Df","venda":5623.36,"vendaA1":5354.86,"msv":24.594,"msvRS":1383.01}]}},"04 - Ferramentas":{"mode":"daily","accumulatedRows":[],"days":{"1":[{"loja":"12-Morumbi","venda":53278.67,"vendaA1":68049.12,"msv":20.9747,"msvRS":11175.06},{"loja":"05-Raposo Tavares","venda":51592.5,"vendaA1":56355.63,"msv":18.1329,"msvRS":9355.21},{"loja":"58-Marginal Tietê 2","venda":46643.99,"vendaA1":55602.38,"msv":19.2558,"msvRS":8981.67},{"loja":"38-Fortaleza","venda":41042.29,"vendaA1":42669.77,"msv":21.9012,"msvRS":8988.77},{"loja":"01-Interlagos","venda":39827.26,"vendaA1":31650.66,"msv":21.1023,"msvRS":8404.47},{"loja":"09-Curitiba","venda":39623.84,"vendaA1":22924.9,"msv":5.3489,"msvRS":2119.45},{"loja":"46-Tamboré","venda":38882.39,"vendaA1":34604.32,"msv":18.6466,"msvRS":7250.24},{"loja":"35-Curitiba Atuba","venda":36657.18,"vendaA1":20669.9,"msv":12.9389,"msvRS":4743.04},{"loja":"03-Campinas D. Pedro","venda":36574.07,"vendaA1":45364.28,"msv":22.2692,"msvRS":8144.76},{"loja":"07-Rio Norte","venda":36543.44,"vendaA1":29731.28,"msv":18.7317,"msvRS":6845.2},{"loja":"45-São Bernardo","venda":35454.05,"vendaA1":51688.03,"msv":18.6294,"msvRS":6604.89},{"loja":"50-Maceio","venda":33194.31,"vendaA1":43252.2,"msv":15.9538,"msvRS":5295.75},{"loja":"34-São José Do Rio Preto","venda":32173.46,"vendaA1":20768.01,"msv":12.347,"msvRS":3972.47},{"loja":"11-Rio Barra","venda":31957.66,"vendaA1":39453.57,"msv":20.835,"msvRS":6658.38},{"loja":"27-Sorocaba","venda":29470.86,"vendaA1":36680.94,"msv":18.8195,"msvRS":5546.27},{"loja":"24-Lar Center","venda":29260.02,"vendaA1":15847.9,"msv":12.1919,"msvRS":3567.34},{"loja":"04-Contagem","venda":28347.1,"vendaA1":36046.62,"msv":14.2248,"msvRS":4032.33},{"loja":"16-Ricardo Jafet","venda":27898.26,"vendaA1":29531.75,"msv":22.5513,"msvRS":6291.43},{"loja":"22-Anhanguera","venda":27753.86,"vendaA1":29447.61,"msv":13.6399,"msvRS":3785.59},{"loja":"19-Porto Alegre","venda":27563.54,"vendaA1":40203.9,"msv":19.4733,"msvRS":5367.52},{"loja":"13-Brasília Sul","venda":27528.53,"vendaA1":38553.95,"msv":18.1076,"msvRS":4984.75},{"loja":"21-Niteroi","venda":27121.3,"vendaA1":25140.55,"msv":16.2877,"msvRS":4417.44},{"loja":"36-Bh Norte","venda":27027.31,"vendaA1":37067.78,"msv":14.3861,"msvRS":3888.17},{"loja":"59-Salvador","venda":26829.49,"vendaA1":37650.98,"msv":18.1072,"msvRS":4858.07},{"loja":"15-São José Dos Campos","venda":25745.84,"vendaA1":21835.31,"msv":17.0636,"msvRS":4393.16},{"loja":"57-Vitória","venda":25682.04,"vendaA1":19827.57,"msv":23.1096,"msvRS":5935.02},{"loja":"42-Jaguaré","venda":24125.02,"vendaA1":20873.17,"msv":21.1451,"msvRS":5101.26},{"loja":"02-Ribeirão Preto","venda":23156.59,"vendaA1":19923.84,"msv":16.941,"msvRS":3922.96},{"loja":"49-Natal","venda":22015.7,"vendaA1":28901.86,"msv":19.921,"msvRS":4385.74},{"loja":"62-Santos","venda":21415,"vendaA1":26267.39,"msv":23.5047,"msvRS":5033.53},{"loja":"18-Goiania","venda":19053.94,"vendaA1":36676.47,"msv":17.5795,"msvRS":3349.59},{"loja":"67-Guarulhos","venda":18871.24,"vendaA1":26468.92,"msv":19.4289,"msvRS":3666.48},{"loja":"39-São José","venda":18418.19,"vendaA1":23162.09,"msv":18.4694,"msvRS":3401.73},{"loja":"28-Brasília Norte","venda":17914.29,"vendaA1":26025.95,"msv":16.5175,"msvRS":2959},{"loja":"44-Campo Grande","venda":16672.04,"vendaA1":21376.99,"msv":19.1169,"msvRS":3187.18},{"loja":"32-São Leopoldo","venda":15766.27,"vendaA1":18752.56,"msv":18.1867,"msvRS":2867.36},{"loja":"33-Londrina","venda":13390.46,"vendaA1":25026.83,"msv":13.9036,"msvRS":1861.76},{"loja":"20-Bh Sul","venda":12320.88,"vendaA1":15981.26,"msv":20.3967,"msvRS":2513.05},{"loja":"56-Jundiaí","venda":12301.74,"vendaA1":10409.55,"msv":20.5943,"msvRS":2533.46},{"loja":"29-Uberlândia","venda":12272.87,"vendaA1":19027.27,"msv":22.1958,"msvRS":2724.06},{"loja":"41-Anália Franco","venda":11983.86,"vendaA1":23216.06,"msv":20.5019,"msvRS":2456.92},{"loja":"55-Taubaté","venda":10360.28,"vendaA1":12119.49,"msv":19.0348,"msvRS":1972.06},{"loja":"76-Joinville","venda":10114.8,"vendaA1":5046.48,"msv":16.7015,"msvRS":1689.32},{"loja":"10-São Caetano","venda":10039.41,"vendaA1":18929.44,"msv":22.0352,"msvRS":2212.2},{"loja":"77-Jardim Botânico Df","venda":9434.29,"vendaA1":14209.47,"msv":18.3966,"msvRS":1735.59},{"loja":"63-Poa Estaleiro","venda":8899.72,"vendaA1":15670.81,"msv":25.8103,"msvRS":2297.04},{"loja":"78-Bauru","venda":5831.48,"vendaA1":5328.09,"msv":23.084,"msvRS":1346.14}],"2":[{"loja":"12-Morumbi","venda":70520.1,"vendaA1":63484.9,"msv":22.1474,"msvRS":15618.36},{"loja":"58-Marginal Tietê 2","venda":55940.12,"vendaA1":59534.07,"msv":20.3863,"msvRS":11404.1},{"loja":"27-Sorocaba","venda":52188.96,"vendaA1":35793.6,"msv":10.8148,"msvRS":5644.13},{"loja":"38-Fortaleza","venda":50304.19,"vendaA1":55274.79,"msv":17.9533,"msvRS":9031.26},{"loja":"50-Maceio","venda":43562.18,"vendaA1":25875.51,"msv":16.3095,"msvRS":7104.76},{"loja":"49-Natal","venda":38814.94,"vendaA1":24170.1,"msv":16.0892,"msvRS":6245.01},{"loja":"05-Raposo Tavares","venda":38399.85,"vendaA1":58932.4,"msv":22.8685,"msvRS":8781.47},{"loja":"46-Tamboré","venda":37543.39,"vendaA1":38556.88,"msv":20.4352,"msvRS":7672.05},{"loja":"13-Brasília Sul","venda":37346.26,"vendaA1":23469.23,"msv":15.4352,"msvRS":5764.47},{"loja":"28-Brasília Norte","venda":36981.75,"vendaA1":33909.5,"msv":15.5632,"msvRS":5755.55},{"loja":"01-Interlagos","venda":35574.71,"vendaA1":47823.47,"msv":20.441,"msvRS":7271.81},{"loja":"07-Rio Norte","venda":34334.68,"vendaA1":27950.33,"msv":15.8037,"msvRS":5426.16},{"loja":"45-São Bernardo","venda":32281.96,"vendaA1":37023.79,"msv":20.1852,"msvRS":6516.19},{"loja":"11-Rio Barra","venda":31355.07,"vendaA1":33254.37,"msv":16.7883,"msvRS":5263.97},{"loja":"34-São José Do Rio Preto","venda":31222.25,"vendaA1":30435.74,"msv":12.4019,"msvRS":3872.15},{"loja":"15-São José Dos Campos","venda":30790.51,"vendaA1":36465.92,"msv":16.2351,"msvRS":4998.87},{"loja":"04-Contagem","venda":30261.25,"vendaA1":24711.72,"msv":13.0833,"msvRS":3959.18},{"loja":"03-Campinas D. Pedro","venda":29894.08,"vendaA1":33467.8,"msv":22.68,"msvRS":6779.98},{"loja":"10-São Caetano","venda":28596.03,"vendaA1":20209.77,"msv":20.2027,"msvRS":5777.18},{"loja":"42-Jaguaré","venda":26291.47,"vendaA1":26871.51,"msv":21.7857,"msvRS":5727.79},{"loja":"32-São Leopoldo","venda":25622.24,"vendaA1":29061.95,"msv":17.8268,"msvRS":4567.62},{"loja":"36-Bh Norte","venda":25104.12,"vendaA1":32535.51,"msv":16.5268,"msvRS":4148.91},{"loja":"35-Curitiba Atuba","venda":25023.07,"vendaA1":20031.77,"msv":13.8396,"msvRS":3463.1},{"loja":"16-Ricardo Jafet","venda":24848.51,"vendaA1":27599.8,"msv":23.9641,"msvRS":5954.71},{"loja":"67-Guarulhos","venda":24802.24,"vendaA1":16261.18,"msv":22.331,"msvRS":5538.6},{"loja":"22-Anhanguera","venda":24351.59,"vendaA1":42214.16,"msv":22.3149,"msvRS":5434.03},{"loja":"21-Niteroi","venda":24251.23,"vendaA1":23012.12,"msv":15.9177,"msvRS":3860.23},{"loja":"41-Anália Franco","venda":24157.28,"vendaA1":16158.32,"msv":16.7744,"msvRS":4052.24},{"loja":"19-Porto Alegre","venda":23659.08,"vendaA1":22855.99,"msv":20.3112,"msvRS":4805.44},{"loja":"24-Lar Center","venda":23113.68,"vendaA1":33438.18,"msv":17.3643,"msvRS":4013.52},{"loja":"62-Santos","venda":22656.24,"vendaA1":26028.99,"msv":20.9109,"msvRS":4737.63},{"loja":"57-Vitória","venda":22210.66,"vendaA1":23260.1,"msv":19.318,"msvRS":4290.65},{"loja":"18-Goiania","venda":18719.28,"vendaA1":28688.1,"msv":16.1396,"msvRS":3021.22},{"loja":"59-Salvador","venda":18348.05,"vendaA1":28433.15,"msv":17.654,"msvRS":3239.17},{"loja":"44-Campo Grande","venda":17774.37,"vendaA1":20222.57,"msv":17.8246,"msvRS":3168.21},{"loja":"02-Ribeirão Preto","venda":17662.48,"vendaA1":16316.76,"msv":18.5066,"msvRS":3268.73},{"loja":"20-Bh Sul","venda":17471.27,"vendaA1":15317.91,"msv":18.9612,"msvRS":3312.77},{"loja":"09-Curitiba","venda":15519.69,"vendaA1":24786.17,"msv":22.2853,"msvRS":3458.61},{"loja":"29-Uberlândia","venda":15117.67,"vendaA1":18826.01,"msv":21.7585,"msvRS":3289.38},{"loja":"39-São José","venda":15087.59,"vendaA1":10112.96,"msv":16.8161,"msvRS":2537.14},{"loja":"33-Londrina","venda":11592.54,"vendaA1":24972.71,"msv":20.576,"msvRS":2385.28},{"loja":"63-Poa Estaleiro","venda":10712.23,"vendaA1":11118.08,"msv":24.7675,"msvRS":2653.15},{"loja":"55-Taubaté","venda":10656.86,"vendaA1":26888.19,"msv":16.0134,"msvRS":1706.53},{"loja":"77-Jardim Botânico Df","venda":10421.23,"vendaA1":11824.93,"msv":14.0567,"msvRS":1464.88},{"loja":"56-Jundiaí","venda":9097.98,"vendaA1":14444.95,"msv":23.7764,"msvRS":2163.17},{"loja":"76-Joinville","venda":8460.56,"vendaA1":7318.29,"msv":16.5915,"msvRS":1403.73},{"loja":"78-Bauru","venda":6451.65,"vendaA1":5130.02,"msv":21.8414,"msvRS":1409.13}]}}},"expurgosBySection":{"02 - Carpintaria e Madeiras":[],"04 - Ferramentas":[]},"extras":{"04 - Ferramentas":{"me":{"decolagemPts":189,"diarioPts":674,"mdhPct":0,"servPct":0,"servPts":0,"celebreQty":0,"celebrePts":5},"rival":{"decolagemPts":145,"diarioPts":757,"mdhPct":0,"servPct":0,"servPts":0,"celebreQty":0,"celebrePts":3}},"02 - Carpintaria e Madeiras":{"me":{"decolagemPts":170,"diarioPts":660,"mdhPct":75,"servPct":0,"servPts":20,"celebreQty":0,"celebrePts":5},"rival":{"decolagemPts":118,"diarioPts":813,"mdhPct":75,"servPct":0,"servPts":20,"celebreQty":0,"celebrePts":5}}},"savedAt":1795616305431};
 
     let state = {
       activeTab: "02 - Carpintaria e Madeiras",
@@ -2972,9 +3196,163 @@
     }
 
 
+
+    let isOnePageMode = false;
+
+    function toggleOnePageMode() {
+      isOnePageMode = !isOnePageMode;
+      document.body.classList.toggle("onepage-active", isOnePageMode);
+      const btn = document.getElementById("btnToggleOnePage");
+      if (isOnePageMode) {
+        btn.innerHTML = "🔙 Voltar ao Painel Completo";
+        renderOnePageDashboard();
+      } else {
+        btn.innerHTML = "📸 One-Page Diretoria";
+        recalculateAll();
+      }
+    }
+
+    function renderOnePageDashboard() {
+      const avgMode = document.getElementById("avgModeSelect").value;
+      const ignDop = Boolean(state.ignoreDoping);
+      const storeReal = state.storeMsvRealBlack ?? 18.20;
+      const storeMin = STORE_TARGETS["35-Curitiba Atuba"].globalObj * 0.7;
+      const storeDop = storeReal < storeMin;
+      const nowStr = new Date().toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+
+      document.getElementById("opMetaStrip").innerHTML = `
+        <div>
+          <strong style="color:#0f172a; font-size:13px;">📊 Resumo Executivo Campanha BricoBlack 2026</strong> •
+          Critério: <b style="color:#008f26;">${ignDop ? "Placar Potencial (Ignorando Doping)" : "Regra Oficial (c/ Trava Anti-Doping -30%)"}</b>
+        </div>
+        <div>
+          Trava Global Loja Atuba: <b style="color:${storeDop ? "#b91c1c" : "#15803d"};">${storeReal.toFixed(2).replace(".", ",")}%</b> (Piso 12,66%) •
+          Atualizado em: <b style="color:#0f172a;">${nowStr}</b>
+        </div>
+      `;
+
+      const duelsMeta = [
+        { sec: "04 - Ferramentas", icon: "🛠️", title: "04 - Ferramentas" },
+        { sec: "02 - Carpintaria e Madeiras", icon: "🪵", title: "02 - Carpintaria e Madeiras" }
+      ];
+
+      const duelsHtml = [];
+      const top5Html = [];
+
+      duelsMeta.forEach(({ sec, icon, title }) => {
+        const duel = DUEL_CONFIG[sec];
+        const res = computeBlocoRanking(sec, 0, 14, avgMode);
+        const me = res.list.find(s => s.loja === state.myStore);
+        const riv = res.list.find(s => s.loja === duel.rivalStore);
+
+        const meEx = getExtrasTotalFor(sec, "me");
+        const rivEx = getExtrasTotalFor(sec, "rival");
+
+        const meGrand = meEx.preBlackSum + me.totalPts + meEx.extrasSum;
+        const rivGrand = rivEx.preBlackSum + riv.totalPts + rivEx.extrasSum;
+        const diff = meGrand - rivGrand;
+
+        const secBlock = state.blockData[sec];
+        const diasCount = secBlock.mode === "daily" ? Object.keys(secBlock.days || {}).length : "Acumulado";
+
+        duelsHtml.push(`
+          <div class="op-card ${diff >= 0 ? "win" : "lose"}">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+              <div>
+                <strong style="font-size:15px; color:#0f172a;">${icon} ${title}</strong>
+                <span style="font-size:11.5px; color:#64748b; font-weight:600; margin-left:6px;">(${secBlock.mode === "daily" ? diasCount + " dias lançados" : "Consolidado"})</span>
+              </div>
+              <span class="${diff >= 0 ? "op-badge-win" : "op-badge-lose"}">
+                ${diff >= 0 ? `Atuba +${diff} pts` : `Atrás ${Math.abs(diff)} pts`}
+              </span>
+            </div>
+
+            <div class="op-vs-pair">
+              <div class="op-box me">
+                <div style="display:flex; justify-content:space-between; font-size:12px;">
+                  <strong style="color:#15803d;">👉 35 - Curitiba Atuba</strong>
+                  <span style="color:#334155; font-weight:800;">${me.rank}º / 47</span>
+                </div>
+                <div class="op-score-big" style="color:#008f26;">${meGrand} <span style="font-size:13px; font-weight:700;">pts</span></div>
+                <div class="op-kpi-line">
+                  Decol. <b>${meEx.decolagemPts}</b> + Diário <b>${meEx.diarioPts}</b> + Bloco 2x <b>${me.totalPts}</b> + Extras <b>${meEx.extrasSum}</b>
+                </div>
+                <div class="op-kpi-line">
+                  Venda Bloco: <b>${formatBRL(me.vendaSim)}</b> (<span style="color:${me.progPct >= res.avgPct ? "#15803d" : "#b91c1c"}; font-weight:700;">${formatPct(me.progPct)}</span> vs A-1)
+                </div>
+                <div class="op-kpi-line">
+                  MSV: <b style="color:${me.doping ? "#b91c1c" : "#15803d"};">${me.msvSim.toFixed(2).replace(".", ",")}%</b> (Piso ${me.msvMin.toFixed(2).replace(".", ",")}%)
+                </div>
+              </div>
+
+              <div class="op-box">
+                <div style="display:flex; justify-content:space-between; font-size:12px;">
+                  <strong style="color:#0369a1;">🎯 ${duel.rivalLabel}</strong>
+                  <span style="color:#334155; font-weight:800;">${riv.rank}º / 47</span>
+                </div>
+                <div class="op-score-big" style="color:#0284c7;">${rivGrand} <span style="font-size:13px; font-weight:700;">pts</span></div>
+                <div class="op-kpi-line">
+                  Decol. <b>${rivEx.decolagemPts}</b> + Diário <b>${rivEx.diarioPts}</b> + Bloco 2x <b>${riv.totalPts}</b> + Extras <b>${rivEx.extrasSum}</b>
+                </div>
+                <div class="op-kpi-line">
+                  Venda Bloco: <b>${formatBRL(riv.vendaSim)}</b> (<span style="color:${riv.progPct >= res.avgPct ? "#15803d" : "#b91c1c"}; font-weight:700;">${formatPct(riv.progPct)}</span> vs A-1)
+                </div>
+                <div class="op-kpi-line">
+                  MSV: <b style="color:${riv.doping ? "#b91c1c" : "#0f172a"};">${riv.msvSim.toFixed(2).replace(".", ",")}%</b> (Piso ${riv.msvMin.toFixed(2).replace(".", ",")}%)
+                  ${riv.doping ? '<span style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:0 5px; border-radius:4px; font-weight:800; font-size:10px; margin-left:3px;">DOPING</span>' : ''}
+                </div>
+              </div>
+            </div>
+          </div>
+        `);
+
+        const top5Rows = res.list.slice(0, 5).map(st => {
+          const isMe = st.loja === state.myStore;
+          const isRiv = st.loja === duel.rivalStore;
+          const isAboveAvg = st.progPct >= res.avgPct;
+          return `
+            <tr class="${isMe ? "op-me-row" : (isRiv ? "op-riv-row" : "")}">
+              <td><b>${st.rank}º</b></td>
+              <td class="left">${isMe ? "👉 " : (isRiv ? "🎯 " : "")}${st.loja}</td>
+              <td><b>${formatBRL(st.vendaSim)}</b></td>
+              <td><span class="${isAboveAvg ? "op-pill-pos" : "op-pill-neg"}">${formatPct(st.progPct)}</span></td>
+              <td style="color:${st.doping ? "#b91c1c" : "#0f172a"}; font-weight:700;">${st.msvSim.toFixed(2).replace(".", ",")}%</td>
+              <td style="color:#008f26; font-weight:900; font-size:12.5px;">${st.totalPts}</td>
+            </tr>
+          `;
+        }).join("");
+
+        top5Html.push(`
+          <div class="op-table-card">
+            <div class="op-table-header">
+              <span>🏆 Top 5 Bloco Black (2x) — ${title}</span>
+              <span style="color:#475569; font-weight:600; font-size:11.5px;">Média Nac: ${formatPct(res.avgPct)}</span>
+            </div>
+            <table class="op-mini-table">
+              <thead>
+                <tr>
+                  <th>Pos</th>
+                  <th class="left">Loja</th>
+                  <th>Venda Bloco</th>
+                  <th>Prog %</th>
+                  <th>MSV %</th>
+                  <th>Pts 2x</th>
+                </tr>
+              </thead>
+              <tbody>${top5Rows}</tbody>
+            </table>
+          </div>
+        `);
+      });
+
+      document.getElementById("opDuelsContainer").innerHTML = duelsHtml.join("");
+      document.getElementById("opTop5Container").innerHTML = top5Html.join("");
+    }
+
     initState();
     selectMainTab(state.activeTab || "02 - Carpintaria e Madeiras");
   </script>
+
 
 
 </body></html>

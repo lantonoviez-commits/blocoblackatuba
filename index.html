@@ -3298,7 +3298,6 @@
 
         const meWeekPts = me.totalPts;
         const rivWeekPts = riv.totalPts;
-        const weekDiff = meWeekPts - rivWeekPts;
 
         const meGrand = meEx.preBlackSum + meWeekPts + meEx.extrasSum;
         const rivGrand = rivEx.preBlackSum + rivWeekPts + rivEx.extrasSum;
@@ -3308,14 +3307,14 @@
         const diasCount = secBlock.mode === "daily" ? Object.keys(secBlock.days || {}).length : "Acumulado";
 
         duelsHtml.push(`
-          <div class="op-card ${weekDiff >= 0 ? "win" : "lose"}">
+          <div class="op-card ${grandDiff >= 0 ? "win" : "lose"}">
             <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
               <div>
                 <strong style="font-size:15px; color:#0f172a;">${icon} ${title}</strong>
-                <span style="font-size:11.5px; color:#64748b; font-weight:600; margin-left:6px;">(Semana Bloco 2x • ${secBlock.mode === "daily" ? diasCount + " dias" : "Consolidado"})</span>
+                <span style="font-size:11.5px; color:#64748b; font-weight:600; margin-left:6px;">(Acumulado Total da Campanha • ${secBlock.mode === "daily" ? diasCount + " dias no Bloco" : "Consolidado"})</span>
               </div>
-              <span class="${weekDiff >= 0 ? "op-badge-win" : "op-badge-lose"}">
-                ${weekDiff >= 0 ? `Semana: Atuba +${weekDiff} pts` : `Semana: Atrás ${Math.abs(weekDiff)} pts`}
+              <span class="${grandDiff >= 0 ? "op-badge-win" : "op-badge-lose"}">
+                ${grandDiff >= 0 ? `Atuba +${grandDiff} pts` : `Atrás ${Math.abs(grandDiff)} pts`}
               </span>
             </div>
 
@@ -3323,11 +3322,11 @@
               <div class="op-box me">
                 <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; font-size:12px;">
                   <strong style="color:#15803d;">👉 35 - Curitiba Atuba</strong>
-                  <span class="op-rank-pill">${me.rank}º / 47 na Semana</span>
+                  <span class="op-rank-pill">Semana 2x: ${me.rank}º / 47</span>
                 </div>
-                <div class="op-score-big" style="color:#008f26;">${meWeekPts} <span style="font-size:12.5px; font-weight:700;">pts na semana (2x)</span></div>
+                <div class="op-score-big" style="color:#008f26;">${meGrand} <span style="font-size:13px; font-weight:700;">pts totais</span></div>
                 <div class="op-kpi-line">
-                  Prog %: <b>${me.ptsPct} pts</b> + Prog R$: <b>${me.ptsRS} pts</b>
+                  Decol. <b>${meEx.decolagemPts}</b> + Diário <b>${meEx.diarioPts}</b> + Bloco 2x <b>${meWeekPts}</b> + Extras <b>${meEx.extrasSum}</b>
                 </div>
                 <div class="op-kpi-line">
                   Venda Bloco: <b>${formatBRL(me.vendaSim)}</b> (<span style="color:${me.progPct >= res.avgPct ? "#15803d" : "#b91c1c"}; font-weight:700;">${formatPct(me.progPct)}</span> vs A-1)
@@ -3340,11 +3339,11 @@
               <div class="op-box">
                 <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; font-size:12px;">
                   <strong style="color:#0369a1;">🎯 ${duel.rivalLabel}</strong>
-                  <span class="op-rank-pill">${riv.rank}º / 47 na Semana</span>
+                  <span class="op-rank-pill">Semana 2x: ${riv.rank}º / 47</span>
                 </div>
-                <div class="op-score-big" style="color:#0284c7;">${rivWeekPts} <span style="font-size:12.5px; font-weight:700;">pts na semana (2x)</span></div>
+                <div class="op-score-big" style="color:#0284c7;">${rivGrand} <span style="font-size:13px; font-weight:700;">pts totais</span></div>
                 <div class="op-kpi-line">
-                  Prog %: <b>${riv.ptsPct} pts</b> + Prog R$: <b>${riv.ptsRS} pts</b>
+                  Decol. <b>${rivEx.decolagemPts}</b> + Diário <b>${rivEx.diarioPts}</b> + Bloco 2x <b>${rivWeekPts}</b> + Extras <b>${rivEx.extrasSum}</b>
                 </div>
                 <div class="op-kpi-line">
                   Venda Bloco: <b>${formatBRL(riv.vendaSim)}</b> (<span style="color:${riv.progPct >= res.avgPct ? "#15803d" : "#b91c1c"}; font-weight:700;">${formatPct(riv.progPct)}</span> vs A-1)
@@ -3353,20 +3352,6 @@
                   MSV: <b style="color:${riv.doping ? "#b91c1c" : "#0f172a"};">${riv.msvSim.toFixed(2).replace(".", ",")}%</b> (Piso ${riv.msvMin.toFixed(2).replace(".", ",")}%)
                   ${riv.doping ? '<span style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:0 5px; border-radius:4px; font-weight:800; font-size:10px; margin-left:3px;">DOPING</span>' : ''}
                 </div>
-              </div>
-            </div>
-
-            <div class="op-grand-strip ${grandDiff >= 0 ? "win" : "lose"}">
-              <div>
-                <b>🏆 Acumulado Geral Campanha:</b>
-                <span style="color:#15803d; font-weight:800;">Atuba ${meGrand} pts</span>
-                <span style="color:#64748b; font-size:10.5px;">(${meEx.preBlackSum} pré + ${meWeekPts} sem + ${meEx.extrasSum} ext)</span>
-                <b style="margin:0 4px;">vs</b>
-                <span style="color:#0369a1; font-weight:800;">${duel.rivalLabel.split(" - ")[1]} ${rivGrand} pts</span>
-                <span style="color:#64748b; font-size:10.5px;">(${rivEx.preBlackSum} pré + ${rivWeekPts} sem + ${rivEx.extrasSum} ext)</span>
-              </div>
-              <div style="font-weight:800; color:${grandDiff >= 0 ? "#15803d" : "#b45309"};">
-                ${grandDiff >= 0 ? `Geral: +${grandDiff} pts` : `Geral: -${Math.abs(grandDiff)} pts`}
               </div>
             </div>
           </div>

@@ -620,6 +620,31 @@
       border-radius: 4px;
       font-weight: 700;
     }
+
+    .op-rank-pill {
+      background: #e2e8f0;
+      color: #1e293b;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 800;
+      border: 1px solid #cbd5e1;
+      white-space: nowrap;
+    }
+    .op-box.me .op-rank-pill {
+      background: #dcfce7;
+      color: #15803d;
+      border-color: #86efac;
+    }
+    .op-mini-table tr.op-sep-row td {
+      background: #f8fafc !important;
+      color: #94a3b8 !important;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      letter-spacing: 1px;
+      border-bottom: 1px dashed #cbd5e1 !important;
+    }
     .op-pill-neg {
       background: #fee2e2;
       color: #b91c1c;
@@ -3269,9 +3294,9 @@
 
             <div class="op-vs-pair">
               <div class="op-box me">
-                <div style="display:flex; justify-content:space-between; font-size:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; font-size:12px;">
                   <strong style="color:#15803d;">👉 35 - Curitiba Atuba</strong>
-                  <span style="color:#334155; font-weight:800;">${me.rank}º / 47</span>
+                  <span class="op-rank-pill">Bloco: ${me.rank}º / 47</span>
                 </div>
                 <div class="op-score-big" style="color:#008f26;">${meGrand} <span style="font-size:13px; font-weight:700;">pts</span></div>
                 <div class="op-kpi-line">
@@ -3286,9 +3311,9 @@
               </div>
 
               <div class="op-box">
-                <div style="display:flex; justify-content:space-between; font-size:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:6px; font-size:12px;">
                   <strong style="color:#0369a1;">🎯 ${duel.rivalLabel}</strong>
-                  <span style="color:#334155; font-weight:800;">${riv.rank}º / 47</span>
+                  <span class="op-rank-pill">Bloco: ${riv.rank}º / 47</span>
                 </div>
                 <div class="op-score-big" style="color:#0284c7;">${rivGrand} <span style="font-size:13px; font-weight:700;">pts</span></div>
                 <div class="op-kpi-line">
@@ -3306,7 +3331,13 @@
           </div>
         `);
 
-        const top5Rows = res.list.slice(0, 5).map(st => {
+        const top5List = res.list.slice(0, 5);
+        const top5Names = new Set(top5List.map(s => s.loja));
+        const extraStores = [me, riv]
+          .filter(s => s && !top5Names.has(s.loja))
+          .sort((a, b) => a.rank - b.rank);
+
+        const formatTableRow = (st) => {
           const isMe = st.loja === state.myStore;
           const isRiv = st.loja === duel.rivalStore;
           const isAboveAvg = st.progPct >= res.avgPct;
@@ -3320,12 +3351,18 @@
               <td style="color:#008f26; font-weight:900; font-size:12.5px;">${st.totalPts}</td>
             </tr>
           `;
-        }).join("");
+        };
+
+        let tableBodyHtml = top5List.map(formatTableRow).join("");
+        if (extraStores.length > 0) {
+          tableBodyHtml += `<tr class="op-sep-row"><td colspan="6">••• POSIÇÃO NO DUELO DIRETO •••</td></tr>`;
+          tableBodyHtml += extraStores.map(formatTableRow).join("");
+        }
 
         top5Html.push(`
           <div class="op-table-card">
             <div class="op-table-header">
-              <span>🏆 Top 5 Bloco Black (2x) — ${title}</span>
+              <span>🏆 Top 5 Bloco Black (2x) + Duelo — ${title}</span>
               <span style="color:#475569; font-weight:600; font-size:11.5px;">Média Nac: ${formatPct(res.avgPct)}</span>
             </div>
             <table class="op-mini-table">
@@ -3339,7 +3376,7 @@
                   <th>Pts 2x</th>
                 </tr>
               </thead>
-              <tbody>${top5Rows}</tbody>
+              <tbody>${tableBodyHtml}</tbody>
             </table>
           </div>
         `);
